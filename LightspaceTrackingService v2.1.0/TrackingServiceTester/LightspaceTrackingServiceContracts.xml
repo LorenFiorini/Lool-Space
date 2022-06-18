@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LightspaceTrackingServiceContracts</name>
+    </assembly>
+    <members>
+        <member name="T:LightspaceTrackingServiceContracts.ConnectedHeadsetDescription">
+            <summary>
+            Structure describing connected HMD.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.ConnectedHeadsetDescription.PreferredStereoDevice">
+            <summary>
+            Connected HMD model.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.ConnectedHeadsetDescription.TrackerCalibrationData">
+            <summary>
+            Known Tracker offsets.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.ConnectedHeadsetDescription.PreferredTracker">
+            <summary>
+            Name of preferred tracker.
+            </summary>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.ITrackerPlugin">
+            <summary>
+            An interface defining tracking plugin.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.ITrackerPlugin.Streaming">
+            <summary>
+            Gets a value indicating whether the device is currently actively tracking.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.ITrackerPlugin.Connected">
+            <summary>
+            Gets a value indicating whether device is connected.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.ITrackerPlugin.CanPredictPose">
+            <summary>
+            Gets a value indicating whether device can predict pose.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.ITrackerPlugin.PluginName">
+            <summary>
+            Gets the name of tracking pose provider plugin.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.ITrackerPlugin.PluginManufacturer">
+            <summary>
+            Gets the manufacturer of tracking pose provider plugin.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.ITrackerPlugin.PathToPlugin">
+            <summary>
+            Gets or sets path from which plugin was loaded.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.ITrackerPlugin.PredictionModel">
+            <summary>
+            Gets used prediction model description.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackerPlugin.Start">
+            <summary>
+            Starts plugin tracking.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackerPlugin.Stop">
+            <summary>
+            Stops plugin tracking.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackerPlugin.UpdateConnectedHeadsetDescription(LightspaceTrackingServiceContracts.ConnectedHeadsetDescription)">
+            <summary>
+            Updates plugin with connected headset information.
+            </summary>
+            <param name="connectedHeadsetDescription">The connected headset description.</param>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackerPlugin.GetTrackedObjects(System.Single)">
+            <summary>
+            Gets tracked objects.
+            </summary>
+            <param name="predictionTimeMs">Pose prediction time (render to photon latency).</param>
+            <returns>Dictionary containing Tracked objects and their corresponding ids.</returns>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.ITrackingService">
+            <summary>
+            An interface containing API that interfaces with pose tracking provided by loaded plugins.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.ITrackingService.Ready">
+            <summary>
+            Gets a value indicating whether the loaded plugin is ready to start tracking.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.ITrackingService.Streaming">
+            <summary>
+            Gets a value indicating whether the tracking service is currently actively tracking.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.ITrackingService.PluginLoaded">
+            <summary>
+            Gets a value indicating whether plugin has loaded correctly.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackingService.LoadPlugin(System.String)">
+            <summary>
+            Load custom plugin from folder.
+            </summary>
+            <param name="pathToPlugin">Path to folder containing *Plugin.dll.</param>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackingService.Start">
+            <summary>
+            Starts plugin tracking.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackingService.Stop">
+            <summary>
+            Stops plugin tracking.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackingService.Shutdown">
+            <summary>
+            Shuts down the tracking service.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackingService.GetLoadedPluginInformation">
+            <summary>
+            Gets loaded plugin info.
+            </summary>
+            <returns>The <see cref="T:LightspaceTrackingServiceContracts.TrackerPoseProviderDescription"/> of loaded plugin.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackingService.GetTrackedObjects(System.Single)">
+            <summary>
+            Gets tracked objects.
+            </summary>
+            <param name="predictionTimeMs">The pose prediction time (render to photon latency).</param>
+            <returns>A collection of containing tracked objects.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.ITrackingService.UpdateConnectedHeadsetDescription(LightspaceTrackingServiceContracts.ConnectedHeadsetDescription)">
+            <summary>
+            Updates the connected headset description.
+            </summary>
+            <param name="description">The HMD description.</param>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.Matrix">
+            <summary>
+            Represents a 4x4 mathematical matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.ZeroTolerance">
+            <summary>
+            The value for which all absolute numbers smaller than are considered equal to zero.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M11">
+            <summary>
+            Value at row 1 column 1 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M12">
+            <summary>
+            Value at row 1 column 2 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M13">
+            <summary>
+            Value at row 1 column 3 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M14">
+            <summary>
+            Value at row 1 column 4 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M21">
+            <summary>
+            Value at row 2 column 1 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M22">
+            <summary>
+            Value at row 2 column 2 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M23">
+            <summary>
+            Value at row 2 column 3 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M24">
+            <summary>
+            Value at row 2 column 4 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M31">
+            <summary>
+            Value at row 3 column 1 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M32">
+            <summary>
+            Value at row 3 column 2 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M33">
+            <summary>
+            Value at row 3 column 3 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M34">
+            <summary>
+            Value at row 3 column 4 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M41">
+            <summary>
+            Value at row 4 column 1 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M42">
+            <summary>
+            Value at row 4 column 2 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M43">
+            <summary>
+            Value at row 4 column 3 of the matrix.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Matrix.M44">
+            <summary>
+            Value at row 4 column 4 of the matrix.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Matrix.#ctor(System.Single[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:LightspaceTrackingServiceContracts.Matrix"/> struct.
+            </summary>
+            <param name="values">The values to assign to the components of the matrix. This must be an array with sixteen elements.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than sixteen elements.</exception>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Matrix.IsZero(System.Single)">
+            <summary>
+            Determines whether the specified value is close to zero (0.0f).
+            </summary>
+            <param name="a">The floating value.</param>
+            <returns><c>true</c> if the specified value is close to zero (0.0f); otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Matrix.Decompose(LightspaceTrackingServiceContracts.Vector3@,LightspaceTrackingServiceContracts.Quaternion@,LightspaceTrackingServiceContracts.Vector3@)">
+            <summary>
+            Decomposes a matrix into a scale, rotation, and translation.
+            </summary>
+            <param name="scale">When the method completes, contains the scaling component of the decomposed matrix.</param>
+            <param name="rotation">When the method completes, contains the rotation component of the decomposed matrix.</param>
+            <param name="translation">When the method completes, contains the translation component of the decomposed matrix.</param>
+            <remarks>
+            This method is designed to decompose an SRT transformation matrix only.
+            </remarks>
+            <returns>Returns <c>true</c> if the decomposing was successful, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.PredictionModelType">
+            <summary>
+            Pose prediction models.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.PredictionModelType.Unknown">
+            <summary>
+            Unknown prediction model.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.PredictionModelType.NotImplemented">
+            <summary>
+            Prediction not implemented.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.PredictionModelType.KalmanFilterBased">
+            <summary>
+            Kalman filter based pose prediction.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.PredictionModelType.AccelerometerBased">
+            <summary>
+            Accelerometer based pose prediction.
+            </summary>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.Quaternion">
+            <summary>
+            Represents a four dimensional mathematical quaternion.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Quaternion.Identity">
+            <summary>
+            The identity <see cref="T:LightspaceTrackingServiceContracts.Quaternion"/> (0, 0, 0, 1).
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Quaternion.RadiansToDegrees">
+            <summary>
+            Radians-to-degrees conversion constant.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Quaternion.DegreesToRadians">
+            <summary>
+            Degrees-to-radians conversion constant.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Quaternion.W">
+            <summary>
+            The W component of the quaternion.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Quaternion.X">
+            <summary>
+            The X component of the quaternion.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Quaternion.Y">
+            <summary>
+            The Y component of the quaternion.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Quaternion.Z">
+            <summary>
+            The Z component of the quaternion.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LightspaceTrackingServiceContracts.Quaternion"/> struct.
+            </summary>
+            <param name="x">The x component.</param>
+            <param name="y">The y component.</param>
+            <param name="z">The z component.</param>
+            <param name="w">The w component.</param>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.Quaternion.Axis">
+            <summary>
+            Gets the axis components of the quaternion.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.Quaternion.Angle">
+            <summary>
+            Gets the quaternion's angle.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.Quaternion.EulerAngles">
+            <summary>
+            Gets or sets the euler angle representation of the rotation.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.op_Multiply(LightspaceTrackingServiceContracts.Quaternion,LightspaceTrackingServiceContracts.Vector3)">
+            <summary>
+            Multiplies a quaternion by Vector3.
+            </summary>
+            <param name="rotation">The quaternion to multiply.</param>
+            <param name="point">The vector to multiply.</param>
+            <returns>The multiplied Vector3.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.op_Multiply(LightspaceTrackingServiceContracts.Quaternion,LightspaceTrackingServiceContracts.Quaternion)">
+            <summary>
+            Multiplies a quaternion by another.
+            </summary>
+            <param name="left">The first quaternion to multiply.</param>
+            <param name="right">The second quaternion to multiply.</param>
+            <returns>The multiplied quaternion.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.RotationYawPitchRoll(System.Single,System.Single,System.Single,LightspaceTrackingServiceContracts.Quaternion@)">
+            <summary>
+            Creates a quaternion given a yaw, pitch, and roll value.
+            </summary>
+            <param name="yaw">The yaw of rotation.</param>
+            <param name="pitch">The pitch of rotation.</param>
+            <param name="roll">The roll of rotation.</param>
+            <param name="result">When the method completes, contains the newly created quaternion.</param>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.RotationYawPitchRoll(System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a quaternion given a yaw, pitch, and roll value.
+            </summary>
+            <param name="yaw">The yaw of rotation.</param>
+            <param name="pitch">The pitch of rotation.</param>
+            <param name="roll">The roll of rotation.</param>
+            <returns>The newly created quaternion.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.Multiply(LightspaceTrackingServiceContracts.Quaternion@,LightspaceTrackingServiceContracts.Quaternion@,LightspaceTrackingServiceContracts.Quaternion@)">
+            <summary>
+            Multiplies a quaternion by another.
+            </summary>
+            <param name="left">The first quaternion to multiply.</param>
+            <param name="right">The second quaternion to multiply.</param>
+            <param name="result">When the method completes, contains the multiplied quaternion.</param>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.Invert(LightspaceTrackingServiceContracts.Quaternion)">
+            <summary>
+            Conjugates and re-normalizes the quaternion.
+            </summary>
+            <param name="value">The quaternion to conjugate and re-normalize.</param>
+            <returns>The conjugated and re-normalized quaternion.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.Invert(LightspaceTrackingServiceContracts.Quaternion@,LightspaceTrackingServiceContracts.Quaternion@)">
+            <summary>
+            Conjugates and re-normalizes the quaternion.
+            </summary>
+            <param name="value">The quaternion to conjugate and re-normalize.</param>
+            <param name="result">When the method completes, contains the conjugated and re-normalized quaternion.</param>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.RotationMatrix(LightspaceTrackingServiceContracts.Matrix@,LightspaceTrackingServiceContracts.Quaternion@)">
+            <summary>
+            Creates a quaternion given a rotation matrix.
+            </summary>
+            <param name="matrix">The rotation matrix.</param>
+            <param name="result">When the method completes, contains the newly created quaternion.</param>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.Euler(System.Single,System.Single,System.Single)">
+            <summary>
+            Returns a rotation that rotates z degrees around the z axis, x degrees around the x axis, and y degrees around the y axis (in that order).
+            </summary>
+            <param name="x">Degrees around the x axis.</param>
+            <param name="y">Degrees around the Y axis.</param>
+            <param name="z">Degrees around the Z axis.</param>
+            <returns>Returns a rotation Quaternion.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.Euler(LightspaceTrackingServiceContracts.Vector3)">
+            <summary>
+            Returns a rotation that rotates z degrees around the z axis, x degrees around the x axis, and y degrees around the y axis (in that order).
+            </summary>
+            <param name="euler">Vector containing euler angles in degrees.</param>
+            <returns>Returns a rotation Quaternion.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.Normalize(LightspaceTrackingServiceContracts.Quaternion)">
+            <summary>
+            Normalizes quaternion.
+            </summary>
+            <param name="quat">Quaternion to normalize.</param>
+            <returns>Resulting Quaternion.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.Invert">
+            <summary>
+            Conjugates and re-normalizes the quaternion.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.LengthSquared">
+            <summary>
+            Calculates the squared length of the quaternion.
+            </summary>
+            <returns>The squared length of the quaternion.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.IsZero(System.Single)">
+            <summary>
+            Determines whether the specified float is zero within a certain tolerance.
+            </summary>
+            <param name="a">value we evaluate.</param>
+            <returns>
+              <c>true</c> if the specified value is zero; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.Clamp(System.Single,System.Single,System.Single)">
+            <summary>
+            Clamps the specified value between min and max value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="min">The minimum.</param>
+            <param name="max">The maximum.</param>
+            <returns>A value that's between min and max.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.FromEulerRad(LightspaceTrackingServiceContracts.Vector3)">
+            <summary>
+            Converts euler angles to quaternion.
+            from http://stackoverflow.com/questions/11492299/quaternion-to-euler-angles-algorithm-how-to-convert-to-y-up-and-between-ha .
+            </summary>
+            <param name="euler">Rotation in euler angles.</param>
+            <returns>Returns quaternion.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.ToEulerRad(LightspaceTrackingServiceContracts.Quaternion)">
+            <summary>
+            Converts the euler angles to radians.
+            </summary>
+            <param name="rotation">The rotation.</param>
+            <returns>A Vector3.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.NormalizeAngles(LightspaceTrackingServiceContracts.Vector3)">
+            <summary>
+            Normalizes vector containing angles.
+            </summary>
+            <param name="angles">The vector.</param>
+            <returns>Normalized vector.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Quaternion.NormalizeAngle(System.Single)">
+            <summary>
+            Normalizes an angle.
+            </summary>
+            <param name="angle">The angle to normalize.</param>
+            <returns>Normalized angle.</returns>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.StereoDevice">
+            <summary>
+            An enum representing connected HMD model.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.StereoDevice.Unknown">
+            <summary>
+            Unknown stereo device.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.StereoDevice.IG1000">
+            <summary>
+            The "IG1000" AR headset.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.StereoDevice.IG2000">
+            <summary>
+            The "IG2000" AR headset.
+            </summary>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.TrackedObject">
+            <summary>
+            Class representing tracked object.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.IsValid">
+            <summary>
+            Gets a value indicating whether this pose is valid.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.Id">
+            <summary>
+            Gets tracked object ID.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.Name">
+            <summary>
+            Tracked object name.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.TrackedObjectType">
+            <summary>
+            Tracked object type.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.Translation">
+            <summary>
+            Gets translation vector.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.Rotation">
+            <summary>
+            Gets the rotation quaternion.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.Velocity">
+            <summary>
+            Gets the measured positional velocity.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.Acceleration">
+            <summary>
+            Gets the measured positional acceleration.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.IsPredicted">
+            <summary>
+            Gets a value indicating whether this pose has been generated through prediction, or is a raw value from the position sensor.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.AngularAcceleration">
+            <summary>
+            Gets the angular acceleration (how quickly the angular velocity is changing).
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.AngularVelocity">
+            <summary>
+            Gets the angular velocity (i.e. how quickly the user is turning their head).
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObject.Timestamp">
+            <summary>
+            Timestamp when tracked object was retrieved.
+            </summary>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.TrackedObjectType">
+            <summary>
+            The tracked object type.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObjectType.Unknown">
+            <summary>
+            The tracked object is undefined.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObjectType.HMD">
+            <summary>
+            The tracked head mounted display.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObjectType.Marker">
+            <summary>
+            Tracked object that is marker.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObjectType.Controller">
+            <summary>
+            Tracked object that is controller.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObjectType.ReferencePlane">
+            <summary>
+            Tracked object that is reference plane.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObjectType.TrackerReference">
+            <summary>
+            Tracked object that is tracker reference.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackedObjectType.Generic">
+            <summary>
+            The generic (unspecified) tracked object.
+            </summary>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.Tracker">
+            <summary>
+            All supported tracking solutions.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Tracker.Unknown">
+            <summary>
+            Unknown tracker.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Tracker.RealSenseT265">
+            <summary>
+            RealSense T265 tracker.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Tracker.ViveGenericTracker">
+            <summary>
+            Vive Generic tracker.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Tracker.AtracsysFtk500">
+            <summary>
+            Atracsys Ftk500 tracker.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Tracker.NdiVega">
+            <summary>
+            NDI Vega tracker.
+            </summary>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.TrackerCalibrationData">
+            <summary>
+            A class representing serializable JSON tracker calibration data stored on device.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackerCalibrationData.PoseToEyeCenterOffset">
+            <summary>
+            Offset from pose center to eye center along x, y and a axis.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackerCalibrationData.CameraToPoseCenterOffset">
+            <summary>
+            Offset from camera to tracked pose center along x, y and a axis.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackerCalibrationData.DeviceRotationAdjustment">
+            <summary>
+            Device rotation by which to adjust reported pose rotation.
+            </summary>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.TrackerPoseProviderDescription">
+            <summary>
+            An struct describing tracking pose provider.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackerPoseProviderDescription.PluginName">
+            <summary>
+            The name of tracking pose provider plugin.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackerPoseProviderDescription.PluginManufacturer">
+            <summary>
+            The manufacturer of tracking pose provider plugin.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackerPoseProviderDescription.PredictionModel">
+            <summary>
+            Gets implemented prediction model.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.TrackerPoseProviderDescription.#ctor(System.String,System.String,LightspaceTrackingServiceContracts.PredictionModelType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LightspaceTrackingServiceContracts.TrackerPoseProviderDescription"/> struct.
+            </summary>
+            <param name="name">The name of tracking pose provider plugin.</param>
+            <param name="manufacturer">The manufacturer of tracking pose provider plugin manufacturer.</param>
+            <param name="predictionModel">The used prediction model description.</param>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.TrackingServiceConstants">
+            <summary>
+            Class for defining common TrackingService constants (e.g. name of the pipe for client/host to talk on).
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.TrackingServiceConstants.TrackingServiceClientHostPipeName">
+            <summary>
+            The name of the pipe for the host service to open and client service to connect to.
+            </summary>
+        </member>
+        <member name="T:LightspaceTrackingServiceContracts.Vector3">
+            <summary>
+            Class representing a 3D Vector.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Vector3.X">
+            <summary>
+            The X component of the vector.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Vector3.Y">
+            <summary>
+            The Y component of the vector.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceContracts.Vector3.Z">
+            <summary>
+            The Z component of the vector.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Vector3.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LightspaceTrackingServiceContracts.Vector3"/> struct.
+            </summary>
+            <param name="x">The x component.</param>
+            <param name="y">The y component.</param>
+            <param name="z">The z component.</param>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.Vector3.Magnitude">
+            <summary>
+            Gets the length of this vector.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceContracts.Vector3.Abs">
+            <summary>
+            Gets the absolute values of a vector.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Vector3.op_Subtraction(LightspaceTrackingServiceContracts.Vector3,LightspaceTrackingServiceContracts.Vector3)">
+            <summary>
+            Subtracts two vectors.
+            </summary>
+            <param name="left">The first vector to subtract.</param>
+            <param name="right">The second vector to subtract.</param>
+            <returns>The difference of the two vectors.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Vector3.op_Addition(LightspaceTrackingServiceContracts.Vector3,LightspaceTrackingServiceContracts.Vector3)">
+            <summary>
+            Adds two vectors.
+            </summary>
+            <param name="left">The first vector to add.</param>
+            <param name="right">The second vector to add.</param>
+            <returns>The sum of the two vectors.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Vector3.op_Multiply(System.Single,LightspaceTrackingServiceContracts.Vector3)">
+            <summary>
+            Scales a vector by the given value.
+            </summary>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <param name="value">The vector to scale.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Vector3.op_Multiply(LightspaceTrackingServiceContracts.Vector3,System.Single)">
+            <summary>
+            Scales a vector by the given value.
+            </summary>
+            <param name="value">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Vector3.op_Division(LightspaceTrackingServiceContracts.Vector3,System.Int32)">
+            <summary>
+            Scales a vector by the given value.
+            </summary>
+            <param name="value">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Vector3.Transform(LightspaceTrackingServiceContracts.Vector3@,LightspaceTrackingServiceContracts.Quaternion@,LightspaceTrackingServiceContracts.Vector3@)">
+            <summary>
+            Transforms a 3D vector by the given <see cref="T:LightspaceTrackingServiceContracts.Quaternion" /> rotation.
+            </summary>
+            <param name="vector">The vector to rotate.</param>
+            <param name="rotation">The <see cref="T:LightspaceTrackingServiceContracts.Quaternion" /> rotation to apply.</param>
+            <param name="result">When the method completes, contains the transformed <see cref="T:LightspaceTrackingServiceContracts.Vector3" />.</param>
+        </member>
+        <member name="M:LightspaceTrackingServiceContracts.Vector3.Transform(LightspaceTrackingServiceContracts.Vector3,LightspaceTrackingServiceContracts.Quaternion)">
+            <summary>
+            Transforms a 3D vector by the given <see cref="T:LightspaceTrackingServiceContracts.Quaternion" /> rotation.
+            </summary>
+            <param name="vector">The vector to rotate.</param>
+            <param name="rotation">The <see cref="T:LightspaceTrackingServiceContracts.Quaternion" /> rotation to apply.</param>
+            <returns>The transformed <see cref="T:LightspaceTrackingServiceContracts.Vector3" />.</returns>
+        </member>
+    </members>
+</doc>

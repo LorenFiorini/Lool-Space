@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>API Guide | Lightspace Compositor Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="API Guide | Lightspace Compositor Documentation ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Home">Home</a>
+                      </li>
+                      <li>
+                          <a href="../articles/device-setup.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/LightspaceCompositor.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="device-setup.html" title="Device Setup" class="">Device Setup</a>
+                    </li>
+                    <li class="active">
+                      <a href="api-guide.html" title="API Guide" class="active">API Guide</a>
+                    </li>
+                    <li class="">
+                      <a href="samples.html" title="Sample Projects" class="">Sample Projects</a>
+                    </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="api-guide">API Guide</h1>
+
+<p>The section contains Compositor API integration guidelines.</p>
+<h2 id="api-guide-head1">Quick API Setup Guide</h2>
+<ol>
+<li><p>Import <code>LightspaceCompositor</code> and required dlls to your renderer project.</p>
+</li>
+<li><p>Initialize <code>Compositor</code>.</p>
+<pre><code>using LightspaceCompositor
+// ...
+var compositor = new Compositor();
+compositor.Run();
+</code></pre>
+<p>This step is required to show compositor window and start internal renderer.</p>
+<p>Use <code>compositor.GetGraphicsAdapterInfo();</code> to set up external D3D11 device used for rendering with correct adapter.</p>
+<p>This will also initialize internal buffer scheduler and create texture descriptions for the render device to render to.</p>
+</li>
+<li><p>(Optional) Set up tracking.</p>
+<p>If tracking is required, a path to Lightspace tracking service and Lightspace tracking plugin must be set via <code>Compositor.Tracking</code> interface prior running the compositor, e.g.</p>
+<pre><code>var compositor = new Compositor();
+compositor.Tracking.SetTrackingServiceProviderPath(&quot;..\\..\\..\\external\\TrackingServiceHost\\LightspaceTrackingServiceHost.exe&quot;);
+compositor.Tracking.SetTrackingPluginPath(&quot;..\\..\\..\\external\\TrackingServiceHost\\TrackingPlugins\\RealSensePlugin&quot;);
+compositor.Run();
+</code></pre>
+<p>In addition, <code>Compositor.Tracking.GetTrackedObjectPoses</code> method can be used to track objects if loaded plugin supports it.</p>
+</li>
+<li><p>Start render loop.</p>
+<p>Next acquire pose with <code>GetCurrentPose</code> to use for rendering. Then use <code>RenderStart</code> and <code>RenderFinish</code> to wrap render part in the render loop. It is recommended to use <code>WaitRenderStart</code> before <code>RenderStart</code> to sync renderer with the compositor.</p>
+<pre><code>compositor.WaitRenderStart();
+var pose = compositor.GetCurrentPose();
+var bufferSet = compositor.RenderStart();
+// ...
+// Do rendering by accessing textures from the buffer set texture descriptions e.g. RTVs, SRVs, etc.
+// ...
+compositor.RenderFinish(bufferSet.Id, pose);
+</code></pre>
+</li>
+</ol>
+<h2 id="client-host-communication-mode">Client-Host Communication Mode</h2>
+<p>The compositor can be started in separate process and communicated with using client libraries.</p>
+<h3 id="using-c-client">Using C# Client</h3>
+<ol>
+<li>To set up C# client use project contents from <code>compositorClient</code> in your project.</li>
+<li>API usage is similar to similar to <a href="#api-guide-head1">Quick API Setup Guide</a>. Only difference is to initialize compositor with client API using either.
+<pre><code>    var compositor = new CompositorServiceClient(&quot;..\\pathToHost\\LightspaceCompositorHost.exe&quot;);
+</code></pre>
+or, if process is managed separately:
+<pre><code>    if (CompositorServiceClient.TryConnectToExistingHostProcess(out CompositorServiceClient client))
+    {
+        ...
+    }
+</code></pre>
+</li>
+</ol>
+<h3 id="using-c-client-1">Using C++ Client</h3>
+<p>To set up C++ client use project contents from <code>compositorNativeClient</code>:</p>
+<ol>
+<li><code>LightspaceCompositorServiceClientNative.h</code> needs to be added as a header files. <strong>The file might require additional editing</strong></li>
+<li><code>LightspaceCompositorServiceClientNative.dll</code> needs to be copied to output dir.</li>
+<li><code>LightspaceCompositorServiceClientNative.lib</code>  need to be added as additional libraries (<code>addlibs</code> might be necessary as well).</li>
+<li>Add the following additional dependencies:
+<pre><code>kernel32.lib
+user32.lib
+gdi32.lib
+winspool.lib
+comdlg32.lib
+advapi32.lib
+shell32.lib
+ole32.lib
+oleaut32.lib
+uuid.lib
+odbc32.lib
+odbccp32.lib
+bcrypt.lib
+LightspaceCompositorServiceClientNative.lib
+bootstrapperdll.lib
+Runtime.lib
+System.Private.TypeLoader.Native.lib
+</code></pre>
+</li>
+</ol>
+<p><strong>NB! The setup is tested with Visual Studio 2022 platform tool set v143</strong></p>
+<h4 id="code-samples">Code samples</h4>
+<p><code>LightspaceCompositorServiceClientNative.h</code> sample</p>
+<pre><code>#pragma once
+
+enum LightspaceCompositorContracts_LightspaceCompositorContracts_Eye
+{
+    Left = 0,
+    Right = 1,
+};
+
+enum LightspaceCompositorContracts_LightspaceCompositorContracts_TextureFormat
+{
+    R8G8B8A8_UN = 0,
+    R32G8X24_T = 1,
+};
+
+struct LightspaceCompositorContracts_LightspaceCompositorContracts_TextureDescription
+{
+    /* 0x0000 */ void* Handle;
+    /* 0x0008 */ enum LightspaceCompositorContracts_LightspaceCompositorContracts_Eye Eye;
+    /* 0x000c */ enum LightspaceCompositorContracts_LightspaceCompositorContracts_TextureFormat Format;
+    /* 0x0010 */ int Width;
+    /* 0x0014 */ int Height;
+}; /* size: 0x0018 */
+
+struct LightspaceCompositorContracts_LightspaceCompositorContracts_BufferSet
+{
+    /* 0x0000 */ int Id;
+    /* 0x0004 */ long Padding_0;
+    /* 0x0008 */ struct LightspaceCompositorContracts_LightspaceCompositorContracts_TextureDescription ColorL;
+    /* 0x0020 */ struct LightspaceCompositorContracts_LightspaceCompositorContracts_TextureDescription ColorR;
+    /* 0x0038 */ struct LightspaceCompositorContracts_LightspaceCompositorContracts_TextureDescription DepthL;
+    /* 0x0050 */ struct LightspaceCompositorContracts_LightspaceCompositorContracts_TextureDescription DepthR;
+}; /* size: 0x0068 */
+
+enum LightspaceCompositorContracts_LightspaceCompositorContracts_CalibrationState
+{
+    Unavailable = 0,
+    Loading = 1,
+    Faulted = 2,
+    Loaded = 3,
+};
+
+struct LightspaceCompositorContracts_LightspaceCompositorContracts_CalibrationInfo
+{
+    /* 0x0000 */ __int64 Timestamp;
+    /* 0x0008 */ enum LightspaceCompositorContracts_LightspaceCompositorContracts_CalibrationState State;
+    /* 0x000c */ bool IsValid;
+    /* 0x000d */ char __PADDING__[3];
+}; /* size: 0x0010 */
+
+struct LightspaceCompositorContracts_LightspaceCompositorContracts_CalibrationIntrinsics
+{
+    /* 0x0000 */ float FX;
+    /* 0x0004 */ float FY;
+    /* 0x0008 */ float CX;
+    /* 0x000c */ float CY;
+    /* 0x0010 */ float RX;
+    /* 0x0014 */ float RY;
+    /* 0x0018 */ float RZ;
+    /* 0x001c */ float TX;
+    /* 0x0020 */ float TY;
+    /* 0x0024 */ float TZ;
+}; /* size: 0x0028 */
+
+struct LightspaceCompositorContracts_LightspaceCompositorContracts_Matrix
+{
+    union
+    {
+        struct
+        {
+            /* 0x0000 */ float M11;
+            /* 0x0004 */ float M12;
+            /* 0x0008 */ float M13;
+            /* 0x000c */ float M14;
+            /* 0x0010 */ float M21;
+            /* 0x0014 */ float M22;
+            /* 0x0018 */ float M23;
+            /* 0x001c */ float M24;
+            /* 0x0020 */ float M31;
+            /* 0x0024 */ float M32;
+            /* 0x0028 */ float M33;
+            /* 0x002c */ float M34;
+            /* 0x0030 */ float M41;
+            /* 0x0034 */ float M42;
+            /* 0x0038 */ float M43;
+            /* 0x003c */ float M44;
+        }; /* size: 0x0040 */
+    };
+}; /* size: 0x0040 */
+
+struct LightspaceCompositorContracts_LightspaceCompositorContracts_Quaternion
+{
+    union
+    {
+        struct
+        {
+            /* 0x0000 */ float W;
+            /* 0x0004 */ float X;
+            /* 0x0008 */ float Y;
+            /* 0x000c */ float Z;
+        }; /* size: 0x0010 */
+    }; /* size: 0x0010 */
+}; /* size: 0x0010 */
+
+struct LightspaceCompositorContracts_LightspaceCompositorContracts_Vector3
+{
+    /* 0x0000 */ float X;
+    /* 0x0004 */ float Y;
+    /* 0x0008 */ float Z;
+}; /* size: 0x000c */
+
+struct LightspaceCompositorContracts_LightspaceCompositorContracts_TrackedHeadPose
+{
+    /* 0x0000 */ struct LightspaceCompositorContracts_LightspaceCompositorContracts_Vector3 Translation;
+    /* 0x000c */ struct LightspaceCompositorContracts_LightspaceCompositorContracts_Quaternion Rotation;
+    /* 0x001c */ long Padding_0;
+    /* 0x0020 */ __int64 Timestamp;
+}; /* size: 0x0028 */
+
+struct LightspaceCompositorContracts_LightspaceCompositorContracts_Vector2
+{
+    /* 0x0000 */ float X;
+    /* 0x0004 */ float Y;
+}; /* size: 0x0008 */
+
+struct LightspaceCompositorServiceClientNative_LightspaceCompositorServiceClientNative_NativeContracts_NativeGraphicsAdapterInfo
+{
+    /* 0x0000 */ void* AdapterDescription;
+    /* 0x0008 */ int AdapterDeviceId;
+    /* 0x000c */ long Padding_0;
+    /* 0x0010 */ __int64 AdapterLuid;
+    /* 0x0018 */ int AdapterOrderId;
+    /* 0x001c */ long Padding_1;
+    /* 0x0020 */ void* OutputDeviceName;
+}; /* size: 0x0028 */
+
+enum LightspaceCompositorContracts_LightspaceCompositorContracts_StereoDeviceModel
+{
+    Other = 0,
+    Virtual = 1,
+    Ig1000Demo = 2,
+    Ig1000 = 3,
+    Ig2000Lab = 4,
+};
+
+struct LightspaceCompositorServiceClientNative_LightspaceCompositorServiceClientNative_NativeContracts_NativeStereoDevice
+{
+    /* 0x0000 */ enum LightspaceCompositorContracts_LightspaceCompositorContracts_StereoDeviceModel Model;
+    /* 0x0004 */ float HorizontalFovDeg;
+    /* 0x0008 */ float VerticalFovDeg;
+}; /* size: 0x000c */
+
+struct LightspaceCompositorServiceClientNative_LightspaceCompositorServiceClientNative_NativeContracts_NativeTrackingProviderDescription
+{
+    /* 0x0000 */ void* Name;
+    /* 0x0008 */ void* Manufacturer;
+    /* 0x0010 */ void* PredictionModel;
+}; /* size: 0x0018 */
+
+extern &quot;C&quot; int __stdcall initialize(void* compositorHostPath);
+extern &quot;C&quot; bool __stdcall tryInitialize();
+extern &quot;C&quot; bool __stdcall isFullScreen();
+extern &quot;C&quot; bool __stdcall isMaximized();
+extern &quot;C&quot; int __stdcall getBufferSet(int index, LightspaceCompositorContracts_LightspaceCompositorContracts_BufferSet * bufferSet);
+extern &quot;C&quot; int __stdcall getBufferSetCount();
+extern &quot;C&quot; int __stdcall getCurrentPose(LightspaceCompositorContracts_LightspaceCompositorContracts_TrackedHeadPose * pose);
+extern &quot;C&quot; int __stdcall getGraphicsAdapterInfo(LightspaceCompositorServiceClientNative_LightspaceCompositorServiceClientNative_NativeContracts_NativeGraphicsAdapterInfo * nativeGraphicsAdapterInfo);
+extern &quot;C&quot; int __stdcall setTrackingServiceProviderPath(void* providerPath);
+extern &quot;C&quot; int __stdcall setTrackingPluginPath(void* pluginPath);
+extern &quot;C&quot; int __stdcall getCurrentTrackerInfo(LightspaceCompositorServiceClientNative_LightspaceCompositorServiceClientNative_NativeContracts_NativeTrackingProviderDescription * nativeTrackerInfo);
+extern &quot;C&quot; int __stdcall renderStart(LightspaceCompositorContracts_LightspaceCompositorContracts_BufferSet * bufferSet);
+extern &quot;C&quot; int __stdcall renderFinish(int bufferSetId, LightspaceCompositorContracts_LightspaceCompositorContracts_TrackedHeadPose pose);
+extern &quot;C&quot; int __stdcall run();
+extern &quot;C&quot; int __stdcall setPlanes(float nearPlane, float farPlane);
+extern &quot;C&quot; int __stdcall shutdown();
+extern &quot;C&quot; int __stdcall waitRenderStart();
+extern &quot;C&quot; int __stdcall getStereoDevice(LightspaceCompositorServiceClientNative_LightspaceCompositorServiceClientNative_NativeContracts_NativeStereoDevice * stereoDevice);
+extern &quot;C&quot; float __stdcall getPupilDistance();
+extern &quot;C&quot; int __stdcall setInvertDepth(bool invertDepth);
+extern &quot;C&quot; int __stdcall setPupilDistance(float pupilDistanceMeters);
+extern &quot;C&quot; int __stdcall getPixelOffsets(LightspaceCompositorContracts_LightspaceCompositorContracts_Eye eyeSide, LightspaceCompositorContracts_LightspaceCompositorContracts_Vector2 * offset);
+extern &quot;C&quot; int __stdcall getCalibrationStatus(LightspaceCompositorContracts_LightspaceCompositorContracts_CalibrationInfo * status);
+extern &quot;C&quot; int __stdcall getCalibratedProjectionMatrix(LightspaceCompositorContracts_LightspaceCompositorContracts_Eye eye, LightspaceCompositorContracts_LightspaceCompositorContracts_Matrix * matrix);
+extern &quot;C&quot; int __stdcall getCalibratedViewMatrix(LightspaceCompositorContracts_LightspaceCompositorContracts_Eye eye, LightspaceCompositorContracts_LightspaceCompositorContracts_Matrix * matrix);
+extern &quot;C&quot; int __stdcall getCalibrationIntrinsics(LightspaceCompositorContracts_LightspaceCompositorContracts_Eye eye, LightspaceCompositorContracts_LightspaceCompositorContracts_CalibrationIntrinsics * intrinsics);
+extern &quot;C&quot; void* __stdcall getLastError();
+</code></pre>
+<p><code>main.cpp</code> sample</p>
+<pre><code>// NativeClientTester.cpp - Used to test native client calls to compositor host in Release x64 config
+
+#define _ITERATOR_DEBUG_LEVEL 0
+#include &lt;conio.h&gt;
+#include &lt;iostream&gt;
+#include &quot;LightspaceCompositorServiceClientNative.h&quot;
+
+int main()
+{
+    std::cout &lt;&lt; &quot;Initializing compositor native call tests...\n&quot;;
+
+    // todo: add and parse path as command line argument for easier startup testing
+    auto* path = const_cast&lt;char*&gt;(R&quot;(..\..\LightspaceCompositor-latest\compositorHost\net472\LightspaceCompositorHost.exe)&quot;);
+    int res = initialize(path);
+    if (res != 0)
+    {
+        std::cout &lt;&lt; &quot;Failed to initialize compositor communication&quot;;
+        return res;
+    }
+
+    res = run();
+    if (res != 0)
+    {
+        std::cout &lt;&lt; &quot;Failed to run compositor&quot;;
+        return res;
+    }
+
+    LightspaceCompositorServiceClientNative_LightspaceCompositorServiceClientNative_NativeContracts_NativeGraphicsAdapterInfo adapterInfo;
+    res = getGraphicsAdapterInfo(&amp;adapterInfo);
+    if (res != 0)
+    {
+        std::cout &lt;&lt; &quot;Failed to get graphics adapter info&quot;;
+        return res;
+    }
+
+    auto* deviceName = static_cast&lt;char*&gt;(adapterInfo.OutputDeviceName);
+    std::cout &lt;&lt; &quot;Output device name: &quot; &lt;&lt; deviceName &lt;&lt; std::endl;
+
+    res = setPlanes(0, 100);
+    if (res != 0)
+    {
+        std::cout &lt;&lt; &quot;Failed to set plane distances&quot;;
+        return res;
+    }
+
+    res = setPupilDistance(0.063f);
+    float pd = getPupilDistance();
+    std::cout &lt;&lt; &quot;PD set to: &quot;  &lt;&lt; pd &lt;&lt; std::endl;
+    if (res != 0 || pd &lt; 0)
+    {
+        std::cout &lt;&lt; &quot;Failed to set pupil distance&quot;;
+        return res;
+    }
+
+    while (true)
+    {
+        int c = _kbhit();
+        if (c != 0)
+        {
+            std::cout &lt;&lt; &quot;Exiting...&quot;;
+            break;
+        }
+
+        waitRenderStart();
+        if (res != 0)
+        {
+            std::cout &lt;&lt; &quot;Wait render start failed&quot;;
+            break;
+        }
+
+        LightspaceCompositorContracts_LightspaceCompositorContracts_TrackedHeadPose pose;
+        res = getCurrentPose(&amp;pose);
+        if (res != 0)
+        {
+            std::cout &lt;&lt; &quot;Pose acquisition failed&quot;;
+            break;
+        }
+
+        LightspaceCompositorContracts_LightspaceCompositorContracts_BufferSet set;
+        res = renderStart(&amp;set);
+        if (res != 0)
+        {
+            std::cout &lt;&lt; &quot;Buffer set acquisition failed&quot;;
+            break;
+        }
+
+        std::cout &lt;&lt; &quot;set id: &quot; &lt;&lt; set.Id &lt;&lt; &quot; tex width px: &quot; &lt;&lt; set.ColorL.Width &lt;&lt; &quot; tex height px: &quot; &lt;&lt; set.ColorL.Height &lt;&lt; std::endl;
+
+        // Finish rendering.
+        res = renderFinish(set.Id, pose);
+        if (res != 0)
+        {
+            std::cout &lt;&lt; &quot;Render finish failed&quot;;
+            break;
+        }
+    }
+
+    res = shutdown();
+    if (res != 0)
+    {
+        std::cout &lt;&lt; &quot;Shutdown failed&quot;;
+    }
+
+    return res;
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

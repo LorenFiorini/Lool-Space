@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TrackingServiceTester</name>
+    </assembly>
+    <members>
+        <member name="T:TrackingServiceTester.Program">
+            <summary>
+            The tests program.
+            </summary>
+        </member>
+        <member name="M:TrackingServiceTester.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+    </members>
+</doc>

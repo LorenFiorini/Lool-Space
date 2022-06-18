@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LightspaceTrackingService</name>
+    </assembly>
+    <members>
+        <member name="T:LightspaceTrackingService.DefaultTrackerPlugin">
+            <summary>
+            A class representing default tracker plugin used to be placeholder before any other plugin is loaded.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingService.DefaultTrackerPlugin.PluginName">
+            <summary>
+            Gets the name of tracking pose provider plugin.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingService.DefaultTrackerPlugin.PluginManufacturer">
+            <summary>
+            Gets the manufacturer of tracking pose provider plugin manufacturer.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingService.DefaultTrackerPlugin.PredictionModel">
+            <summary>
+            Gets implemented prediction model.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingService.DefaultTrackerPlugin.CanPredictPose">
+            <summary>
+            Gets a value indicating whether gets value indicating if device can predict pose.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingService.DefaultTrackerPlugin.PathToPlugin">
+            <summary>
+            Gets or sets path from which plugin was loaded.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingService.DefaultTrackerPlugin.Streaming">
+            <summary>
+            Gets or sets a value indicating whether the device is currently actively tracking.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingService.DefaultTrackerPlugin.Connected">
+            <summary>
+            Gets a value indicating whether device is connected.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingService.DefaultTrackerPlugin.Start">
+            <summary>
+            Starts the device.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingService.DefaultTrackerPlugin.Stop">
+            <summary>
+            Stops the device.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingService.DefaultTrackerPlugin.UpdateConnectedHeadsetDescription(LightspaceTrackingServiceContracts.ConnectedHeadsetDescription)">
+            <summary>
+            Updates plugin with connected headset information.
+            </summary>
+            <param name="connectedHeadsetDescription">The connected headset description.</param>
+        </member>
+        <member name="M:LightspaceTrackingService.DefaultTrackerPlugin.GetTrackedObjects(System.Single)">
+            <summary>
+            Gets tracked objects.
+            </summary>
+            <param name="predictionTimeMs">Pose prediction time (render to photon latency).</param>
+            <returns>Dictionary containing Tracked objects and their corresponding ids.</returns>
+        </member>
+        <member name="T:LightspaceTrackingService.PluginLoader">
+            <summary>
+            Loads plugins and extracts ITracker commands.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingService.PluginLoader.LoadPlugin(System.String)">
+            <summary>
+            Loads the plugin.
+            </summary>
+            <param name="relativePath">The relative path to plugins (.dll).</param>
+            <returns>An Assembly.</returns>
+        </member>
+        <member name="M:LightspaceTrackingService.PluginLoader.CreateCommands(System.Reflection.Assembly)">
+            <summary>
+            Creates the commands of type ITrackers.
+            </summary>
+            <param name="assembly">The assembly.</param>
+            <returns>A list of ITrackers commands found.</returns>
+        </member>
+        <member name="T:LightspaceTrackingService.TrackingService">
+            <summary>
+            A TrackingService class containing API that interfaces with pose and marker tracking.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingService.TrackingService.commandLoader">
+            <summary>
+            Loads commands from assembly.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingService.TrackingService.pluginAssembly">
+            <summary>
+            Plugin assembly.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingService.TrackingService.foundPlugin">
+            <summary>
+            File name of found plugin.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingService.TrackingService.pluginIsLoaded">
+            <summary>
+            Plugins are loaded.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingService.TrackingService.activeTrackerPlugin">
+            <summary>
+            Active pose trackers.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingService.TrackingService.headsetDescription">
+            <summary>
+            Connected headset description.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingService.TrackingService.Ready">
+            <summary>
+            Gets a value indicating whether the tracking service has a connected tracking device and is ready to start tracking.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingService.TrackingService.Streaming">
+            <summary>
+            Gets a value indicating whether the tracking service is currently actively tracking.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingService.TrackingService.PluginLoaded">
+            <summary>
+            Gets a value indicating whether plugin has loaded correctly.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingService.TrackingService.GetTrackedObjects(System.Single)">
+            <summary>
+            Gets tracked objects.
+            </summary>
+            <param name="predictionTimeMs">The pose prediction time (render to photon latency).</param>
+            <returns>A collection of containing tracked objects.</returns>
+        </member>
+        <member name="M:LightspaceTrackingService.TrackingService.GetLoadedPluginInformation">
+            <summary>
+            Gets loaded plugin metadata.
+            </summary>
+            <returns> TrackerPoseProviderDescription of loaded plugin.</returns>
+        </member>
+        <member name="M:LightspaceTrackingService.TrackingService.UpdateConnectedHeadsetDescription(LightspaceTrackingServiceContracts.ConnectedHeadsetDescription)">
+            <summary>
+            Loads the plugin.
+            </summary>
+            <param name="description"> HMD description.</param>
+        </member>
+        <member name="M:LightspaceTrackingService.TrackingService.LoadPlugin(System.String)">
+            <summary>
+            Load custom plugin from folder.
+            </summary>
+            <param name="pathToPlugin">Path to folder containing *Plugin.dll.</param>
+        </member>
+        <member name="M:LightspaceTrackingService.TrackingService.Start">
+            <summary>
+            Starts plugin tracking.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingService.TrackingService.Stop">
+            <summary>
+            Stops plugin tracking.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingService.TrackingService.Shutdown">
+            <summary>
+            Shuts down the tracking service.
+            </summary>
+        </member>
+    </members>
+</doc>

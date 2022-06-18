@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sample Projects | Lightspace Compositor Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Sample Projects | Lightspace Compositor Documentation ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Home">Home</a>
+                      </li>
+                      <li>
+                          <a href="../articles/device-setup.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/LightspaceCompositor.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="device-setup.html" title="Device Setup" class="">Device Setup</a>
+                    </li>
+                    <li class="">
+                      <a href="api-guide.html" title="API Guide" class="">API Guide</a>
+                    </li>
+                    <li class="active">
+                      <a href="samples.html" title="Sample Projects" class="active">Sample Projects</a>
+                    </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="sample-projects">Sample Projects</h1>
+
+<p>Samples are located under <code>samples</code> folder.</p>
+<h2 id="minicube-sample"><em>MiniCube</em> Sample</h2>
+<p>The sample is based on MiniCube sample found on <a href="https://github.com/sharpdx/SharpDX-Samples/tree/master/Desktop/Direct3D11/MiniCube">GitHub</a></p>
+<p><img src="../images/minicube-sample.png" alt="minicube-sample"></p>
+<h3 id="how-to-use">How To Use</h3>
+<ol>
+<li>Launch application <code>MiniCube.exe</code> in default mode or client-host communication mode using host path as startup argument, e.g. <code>MiniCube.exe path-to-host-exe/LightspaceCompositorHost.exe</code>.</li>
+<li>On small external renderer window:
+<ul>
+<li>Use up and down arrow keys to change cube distance.</li>
+<li>Use left and right arrow keys to change user IPD.</li>
+</ul>
+</li>
+</ol>
+<h3 id="code-sample">Code sample</h3>
+<p>Here is a code sample used with <code>MiniCube</code> application using SharpDX as external renderer core.</p>
+<pre><code>// -----------------------------------------------------------------------
+//  &lt;copyright file=&quot;Program.cs&quot; company=&quot;Lightspace Technologies&quot;&gt;
+//    Copyright (c) Lightspace Technologies. All rights reserved.
+//  &lt;/copyright&gt;
+// -----------------------------------------------------------------------
+
+namespace MiniCube
+{
+    using System;
+    using System.Diagnostics;
+    using System.Drawing;
+    using System.IO;
+    using System.Linq;
+    using System.Reflection;
+    using System.Windows.Forms;
+    using LightspaceCompositor;
+    using LightspaceCompositorContracts;
+    using LightspaceCompositorServiceClient;
+    using SharpDX;
+    using SharpDX.D3DCompiler;
+    using SharpDX.Direct3D;
+    using SharpDX.Direct3D11;
+    using SharpDX.DXGI;
+    using SharpDX.Windows;
+    using Color = SharpDX.Color;
+    using Device = SharpDX.Direct3D11.Device;
+    using Matrix = SharpDX.Matrix;
+    using Vector3 = SharpDX.Vector3;
+
+    /// &lt;summary&gt;
+    /// A compositor integration sample based on MiniCube project found here
+    /// https://github.com/sharpdx/SharpDX-Samples/tree/master/Desktop/Direct3D11/MiniCube
+    /// &lt;/summary&gt;
+    public class Program
+    {
+        /// &lt;summary&gt;
+        /// The main entry point of the program. Initializes render form and compositor
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;cmd&quot;&gt;The cmd line args.&lt;/param&gt;
+        public static void Main(string[] cmd)
+        {
+            var form = new RenderForm(&quot;Lightspace MiniCube Sample&quot;);
+
+            var hostPath = cmd.ToList().FirstOrDefault();
+            var useHost = !string.IsNullOrEmpty(hostPath);
+
+            var compositor = InitializeCompositor(useHost, hostPath);
+            var distance = 1f;
+            var depthDsvDescription = new DepthStencilViewDescription()
+            {
+                Format = Format.D32_Float_S8X24_UInt,
+                Texture2D = new DepthStencilViewDescription.Texture2DResource()
+                                {
+                                    MipSlice = 0
+                                },
+                Dimension = DepthStencilViewDimension.Texture2D,
+                Flags = DepthStencilViewFlags.None
+            };
+
+            // SwapChain description
+            var desc = new SwapChainDescription()
+            {
+                BufferCount = 1,
+                ModeDescription = new ModeDescription(
+                    form.ClientSize.Width,
+                    form.ClientSize.Height,
+                    new Rational(60, 1), Format.R8G8B8A8_UNorm),
+                IsWindowed = true,
+                OutputHandle = form.Handle,
+                SampleDescription = new SampleDescription(1, 0),
+                SwapEffect = SwapEffect.Discard,
+                Usage = Usage.RenderTargetOutput
+            };
+
+            Device device;
+            SwapChain swapChain;
+
+            // Create Device and SwapChain
+            using (var factory2 = new Factory2())
+            {
+                var adapterInfo = compositor.GetGraphicsAdapterInfo();
+                using (var adapter = factory2.Adapters.First(x =&gt; x.Description.Luid == adapterInfo.AdapterLuid))
+                using (var output = adapter.Outputs.First(x =&gt; x.Description.DeviceName == adapterInfo.OutputDeviceName))
+                {
+                    Device.CreateWithSwapChain(adapter, DeviceCreationFlags.None, desc, out device, out swapChain);
+                }
+            }
+
+            var immediateContext = device.ImmediateContext;
+            var deferredContexts = new[]
+            {
+                new DeviceContext(device),
+                new DeviceContext(device)
+            };
+            var commandLists = new CommandList[2];
+
+            // Ignore all windows events
+            var factory = swapChain.GetParent&lt;Factory&gt;();
+            factory.MakeWindowAssociation(form.Handle, WindowAssociationFlags.IgnoreAll);
+
+            // Compile Vertex and Pixel shaders
+            var assembly = Assembly.GetExecutingAssembly();
+            var names = assembly.GetManifestResourceNames();
+            var resourceName = names.First(x =&gt; x.Contains(&quot;MiniCube.MiniCube.fx&quot;));
+
+            // Read embedded shader resource and compile shaders
+            string result = string.Empty;
+            using (var stream = assembly.GetManifestResourceStream(resourceName))
+            using (var reader = new StreamReader(stream))
+            {
+                result = reader.ReadToEnd();
+            }
+            var vertexShaderByteCode = ShaderBytecode.Compile(result, &quot;VS&quot;, &quot;vs_4_0&quot;);
+            var vertexShader = new VertexShader(device, vertexShaderByteCode);
+
+            var pixelShaderByteCode = ShaderBytecode.Compile(result, &quot;PS&quot;, &quot;ps_4_0&quot;);
+            var pixelShader = new PixelShader(device, pixelShaderByteCode);
+
+            var signature = ShaderSignature.GetInputSignature(vertexShaderByteCode);
+
+            // Layout from vertex shader input signature
+            var layout = new InputLayout(device, signature, new[]
+            {
+                new InputElement(&quot;POSITION&quot;, 0, Format.R32G32B32A32_Float, 0, 0),
+                new InputElement(&quot;COLOR&quot;, 0, Format.R32G32B32A32_Float, 16, 0),
+            });
+
+            // Instantiate vertex buffer from vertex data - represents 0.2 x 0.2 cube with colored surfaces
+            var vertices = SharpDX.Direct3D11.Buffer.Create(device, BindFlags.VertexBuffer, new[]
+            {
+                new Vector4(-0.1f, -0.1f, -0.1f, 1f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f), // Front
+                new Vector4(-0.1f,  0.1f, -0.1f, 1f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f),
+                new Vector4( 0.1f,  0.1f, -0.1f, 1f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f),
+                new Vector4(-0.1f, -0.1f, -0.1f, 1f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f),
+                new Vector4( 0.1f,  0.1f, -0.1f, 1f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f),
+                new Vector4( 0.1f, -0.1f, -0.1f, 1f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f),
+                new Vector4(-0.1f, -0.1f,  0.1f, 1f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f), // BACK
+                new Vector4( 0.1f,  0.1f,  0.1f, 1f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f),
+                new Vector4(-0.1f,  0.1f,  0.1f, 1f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f),
+                new Vector4(-0.1f, -0.1f,  0.1f, 1f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f),
+                new Vector4( 0.1f, -0.1f,  0.1f, 1f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f),
+                new Vector4( 0.1f,  0.1f,  0.1f, 1f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f),
+                new Vector4(-0.1f,  0.1f, -0.1f, 1f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f), // Top
+                new Vector4(-0.1f,  0.1f,  0.1f, 1f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4( 0.1f,  0.1f,  0.1f, 1f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4(-0.1f,  0.1f, -0.1f, 1f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4( 0.1f,  0.1f,  0.1f, 1f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4( 0.1f,  0.1f, -0.1f, 1f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4(-0.1f,- 0.1f, -0.1f, 1f), new Vector4(1.0f, 1.0f, 0.0f, 1.0f), // Bottom
+                new Vector4( 0.1f,- 0.1f,  0.1f, 1f), new Vector4(1.0f, 1.0f, 0.0f, 1.0f),
+                new Vector4(-0.1f,- 0.1f,  0.1f, 1f), new Vector4(1.0f, 1.0f, 0.0f, 1.0f),
+                new Vector4(-0.1f,- 0.1f, -0.1f, 1f), new Vector4(1.0f, 1.0f, 0.0f, 1.0f),
+                new Vector4( 0.1f,- 0.1f, -0.1f, 1f), new Vector4(1.0f, 1.0f, 0.0f, 1.0f),
+                new Vector4( 0.1f,- 0.1f,  0.1f, 1f), new Vector4(1.0f, 1.0f, 0.0f, 1.0f),
+                new Vector4(-0.1f, -0.1f, -0.1f, 1f), new Vector4(1.0f, 0.0f, 1.0f, 1.0f), // Left
+                new Vector4(-0.1f, -0.1f,  0.1f, 1f), new Vector4(1.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4(-0.1f,  0.1f,  0.1f, 1f), new Vector4(1.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4(-0.1f, -0.1f, -0.1f, 1f), new Vector4(1.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4(-0.1f,  0.1f,  0.1f, 1f), new Vector4(1.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4(-0.1f,  0.1f, -0.1f, 1f), new Vector4(1.0f, 0.0f, 1.0f, 1.0f),
+                new Vector4( 0.1f, -0.1f, -0.1f, 1f), new Vector4(0.0f, 1.0f, 1.0f, 1.0f), // Right
+                new Vector4( 0.1f,  0.1f,  0.1f, 1f), new Vector4(0.0f, 1.0f, 1.0f, 1.0f),
+                new Vector4( 0.1f, -0.1f,  0.1f, 1f), new Vector4(0.0f, 1.0f, 1.0f, 1.0f),
+                new Vector4( 0.1f, -0.1f, -0.1f, 1f), new Vector4(0.0f, 1.0f, 1.0f, 1.0f),
+                new Vector4( 0.1f,  0.1f, -0.1f, 1f), new Vector4(0.0f, 1.0f, 1.0f, 1.0f),
+                new Vector4( 0.1f,  0.1f,  0.1f, 1f), new Vector4(0.0f, 1.0f, 1.0f, 1.0f),
+            });
+
+            // Create Constant Buffer
+            var constantBuffer = new SharpDX.Direct3D11.Buffer(device, Utilities.SizeOf&lt;Matrix&gt;(), ResourceUsage.Default, BindFlags.ConstantBuffer, CpuAccessFlags.None, ResourceOptionFlags.None, 0);
+
+            // Prepare All the stages
+            immediateContext.InputAssembler.InputLayout = layout;
+            immediateContext.InputAssembler.PrimitiveTopology = PrimitiveTopology.TriangleList;
+            immediateContext.InputAssembler.SetVertexBuffers(0, new VertexBufferBinding(vertices, Utilities.SizeOf&lt;Vector4&gt;() * 2, 0));
+            immediateContext.VertexShader.SetConstantBuffer(0, constantBuffer);
+            immediateContext.VertexShader.Set(vertexShader);
+            immediateContext.PixelShader.Set(pixelShader);
+
+            foreach (var ctx in deferredContexts)
+            {
+                ctx.InputAssembler.InputLayout = layout;
+                ctx.InputAssembler.PrimitiveTopology = PrimitiveTopology.TriangleList;
+                ctx.InputAssembler.SetVertexBuffers(0, new VertexBufferBinding(vertices, Utilities.SizeOf&lt;Vector4&gt;() * 2, 0));
+                ctx.VertexShader.SetConstantBuffer(0, constantBuffer);
+                ctx.VertexShader.Set(vertexShader);
+            }
+
+            deferredContexts[0].PixelShader.Set(pixelShader);
+            deferredContexts[1].PixelShader.Set(pixelShader);
+
+            // Use clock
+            var clock = new Stopwatch();
+            clock.Start();
+
+            // Declare texture for rendering
+            bool userResized = true;
+            bool parametersChanged = true;
+            Texture2D backBuffer = null;
+            RenderTargetView renderView = null;
+            Texture2D depthBuffer = null;
+            DepthStencilView depthView = null;
+
+            // Setup handler on resize form
+            form.UserResized += (sender, args) =&gt; userResized = true;
+
+            var render = true;
+
+            // Setup key handler
+            void KeyHandler(Keys key)
+            {
+                switch (key)
+                {
+                    case Keys.Escape:
+                        form.Close();
+                        break;
+                    case Keys.Up:
+                        distance += 0.05f;
+                        break;
+                    case Keys.S:
+                        render = !render;
+                        break;
+                    case Keys.Down:
+                        distance -= 0.05f;
+                        break;
+                    case Keys.Right:
+                        compositor.Parameters.InterPupillaryDistanceMeters += 0.0005f;
+                        break;
+                    case Keys.Left:
+                        compositor.Parameters.InterPupillaryDistanceMeters -= 0.0005f;
+                        break;
+                }
+
+                parametersChanged = true;
+            }
+            form.KeyUp += (sender, args) =&gt; KeyHandler(args.KeyCode);
+
+            // Main render loop
+            RenderLoop.Run(form, () =&gt;
+            {
+                var time = clock.ElapsedMilliseconds / 1000f;
+                if (parametersChanged)
+                {
+                    form.Text = $&quot;Lightspace MiniCube Sample :: IPD: {compositor.Parameters.InterPupillaryDistanceMeters:F4}m, Distance: {distance:F2}m&quot;;
+                    parametersChanged = false;
+                }
+
+                if (!render)
+                {
+                    return;
+                }
+
+                // Synchronize with the compositor.
+                compositor.WaitRenderStart();
+                var pose = compositor.GetCurrentPose();
+                var bufferSet = compositor.RenderStart();
+
+                if (userResized)
+                {
+                    // Dispose all previous allocated resources
+                    Utilities.Dispose(ref backBuffer);
+                    Utilities.Dispose(ref renderView);
+                    Utilities.Dispose(ref depthBuffer);
+                    Utilities.Dispose(ref depthView);
+
+                    // Resize the backbuffer
+                    swapChain.ResizeBuffers(desc.BufferCount, form.ClientSize.Width, form.ClientSize.Height, Format.Unknown, SwapChainFlags.None);
+
+                    // Get the backbuffer from the swapchain and create renderview
+                    backBuffer = SharpDX.Direct3D11.Resource.FromSwapChain&lt;Texture2D&gt;(swapChain, 0);
+                    renderView = new RenderTargetView(device, backBuffer);
+
+                    depthBuffer = new Texture2D(device, new Texture2DDescription()
+                    {
+                        Format = Format.R32G8X24_Typeless,
+                        ArraySize = 1,
+                        MipLevels = 1,
+                        Width = form.ClientSize.Width,
+                        Height = form.ClientSize.Height,
+                        SampleDescription = new SampleDescription(1, 0),
+                        Usage = ResourceUsage.Default,
+                        BindFlags = BindFlags.DepthStencil | BindFlags.ShaderResource,
+                        CpuAccessFlags = CpuAccessFlags.None,
+                        OptionFlags = ResourceOptionFlags.Shared
+                    });
+
+                    depthView = new DepthStencilView(device, depthBuffer,
+                    new DepthStencilViewDescription()
+                    {
+                        Format = Format.D32_Float_S8X24_UInt,
+                        Dimension = DepthStencilViewDimension.Texture2D,
+                        Flags = DepthStencilViewFlags.None
+                    });
+
+                    // Setup targets and viewport for rendering
+                    immediateContext.Rasterizer.SetViewport(new Viewport(
+                        0,
+                        0,
+                        form.ClientSize.Width,
+                        form.ClientSize.Height,
+                        0.0f,
+                        1.0f));
+
+                    immediateContext.OutputMerger.SetTargets(depthView, renderView);
+                    form.ClientSize = new Size(bufferSet.ColorL.Width, bufferSet.ColorL.Height);
+
+                    // We are done resizing
+                    userResized = false;
+                }
+
+                // Render center camera on immediate context used for external renderer window
+                var vFovRad = compositor.StereoDevice.VerticalFovDeg * (float)Math.PI / 180;
+                var distanceOffset = Matrix.LookAtLH(new Vector3(0, 0, -distance), new Vector3(0, 0, 0), Vector3.UnitY);
+                var view = distanceOffset;
+                var near = compositor.Parameters.NearPlaneMeters;
+                var far = compositor.Parameters.FarPlaneMeters;
+                var proj = Matrix.PerspectiveFovLH(vFovRad, form.ClientSize.Width / (float)form.ClientSize.Height, near, far);
+                var viewProj = Matrix.Multiply(view, proj);
+                var timeRot = Matrix.RotationX(time) * Matrix.RotationY(time * 0.2f) * Matrix.RotationZ(time * 0.7f);
+                var worldViewProj = timeRot * viewProj;
+                worldViewProj.Transpose();
+                immediateContext.ClearDepthStencilView(depthView, DepthStencilClearFlags.Depth, 1.0f, 0);
+                immediateContext.ClearRenderTargetView(renderView, Color.Black);
+                immediateContext.UpdateSubresource(ref worldViewProj, constantBuffer);
+                immediateContext.Draw(36, 0);
+
+                // Render each eye using deferred context to send to compositor.
+                for (var eye = 0; eye &lt; 2; eye++)
+                {
+                    var eyeColorTex = eye == 0 ? bufferSet.ColorL : bufferSet.ColorR;
+                    var eyeDepthTex = eye == 0 ? bufferSet.DepthL : bufferSet.DepthR;
+                    using (var sharedColorTex = device.OpenSharedResource&lt;Texture2D&gt;(eyeColorTex.Handle))
+                    using (var sharedDepthTex = device.OpenSharedResource&lt;Texture2D&gt;(eyeDepthTex.Handle))
+                    using (var sharedColorTexRtv = new RenderTargetView(device, sharedColorTex))
+                    using (var sharedTexDsv = new DepthStencilView(device, sharedDepthTex, depthDsvDescription))
+                    {
+                        var vp = new Viewport(0, 0, eyeColorTex.Width, eyeColorTex.Height);
+                        var calibratedView = compositor.Parameters.GetCalibratedViewMatrix((Eye)eye);
+                        var calibratedProjection = compositor.Parameters.GetCalibratedProjectionMatrix((Eye)eye);
+                        view = Matrix.Multiply(distanceOffset, ToSharpDxMatrix(calibratedView));
+                        proj = ToSharpDxMatrix(calibratedProjection);
+                        viewProj = Matrix.Multiply(view, proj);
+                        worldViewProj = timeRot * viewProj;
+                        worldViewProj.Transpose();
+                        deferredContexts[eye].Rasterizer.SetViewport(vp);
+                        deferredContexts[eye].OutputMerger.SetTargets(sharedTexDsv, sharedColorTexRtv);
+                        deferredContexts[eye].ClearRenderTargetView(sharedColorTexRtv, Color.Black);
+                        deferredContexts[eye].ClearDepthStencilView(sharedTexDsv, DepthStencilClearFlags.Depth, 1.0f, 0);
+                        deferredContexts[eye].UpdateSubresource(ref worldViewProj, constantBuffer);
+                        deferredContexts[eye].Draw(36, 0);
+                        commandLists[eye]?.Dispose();
+                        commandLists[eye] = deferredContexts[eye].FinishCommandList(true);
+                    }
+                }
+
+                immediateContext.ExecuteCommandList(commandLists[0], true);
+                immediateContext.ExecuteCommandList(commandLists[1], true);
+
+                // Present and tell compositor the rendering to buffer sets are finished.
+                compositor.RenderFinish(bufferSet.Id, pose);
+                swapChain.Present(0, PresentFlags.None);
+            });
+
+            // Release all resources
+            compositor.Shutdown();
+            commandLists[0].Dispose();
+            commandLists[1].Dispose();
+
+            deferredContexts[0].Dispose();
+            deferredContexts[1].Dispose();
+
+            signature.Dispose();
+            vertexShaderByteCode.Dispose();
+            vertexShader.Dispose();
+            pixelShaderByteCode.Dispose();
+            pixelShader.Dispose();
+            vertices.Dispose();
+            layout.Dispose();
+            constantBuffer.Dispose();
+            depthBuffer.Dispose();
+            depthView.Dispose();
+            renderView.Dispose();
+            backBuffer.Dispose();
+            immediateContext.ClearState();
+            immediateContext.Flush();
+            device.Dispose();
+            immediateContext.Dispose();
+            swapChain.Dispose();
+            factory.Dispose();
+        }
+
+        private static Matrix ToSharpDxMatrix(LightspaceCompositorContracts.Matrix matrix)
+        {
+            return new Matrix(
+                matrix.M11, matrix.M12, matrix.M13, matrix.M14,
+                matrix.M21, matrix.M22, matrix.M23, matrix.M24,
+                matrix.M31, matrix.M32, matrix.M33, matrix.M34,
+                matrix.M41, matrix.M42, matrix.M43, matrix.M44);
+        }
+
+        private static ICompositor InitializeCompositor(bool useHost, string pathToHost)
+        {
+            // Initialize Compositor
+            var compositor = useHost
+                ? (ICompositor)new CompositorServiceClient(pathToHost)
+                : new Compositor();
+            compositor.Run();
+            compositor.Parameters.InterPupillaryDistanceMeters = 0.063f;
+            compositor.Parameters.InvertDepth = false;
+            compositor.Parameters.UseFogging = true;
+            compositor.Parameters.SetPlanes(0.1f, 100f);
+            return compositor;
+        }
+    }
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

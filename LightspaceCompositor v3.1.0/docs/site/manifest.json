@@ -1,0 +1,644 @@
+{
+  "homepages": [],
+  "source_base_path": "E:/msbuild/ba3b0c85/0/lightspace/sc/pc/lightspace-compositor/docfxgen",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositor.Compositor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositor.Compositor.html",
+          "hash": "8OWsNKXKLjO5FyY7TspiZ3ixpZEMbAYL24rdFYcfcd8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositor.CompositorParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositor.CompositorParameters.html",
+          "hash": "EjQe7B14UXeue8x8KyvV8mn4JflgRbSq1/hTD4gSbg4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositor.Exceptions.CompositorException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositor.Exceptions.CompositorException.html",
+          "hash": "+Vl0PWcSgMuY3rw2Lg8cDVjqHUc6Hz3a9+SEnmKlw5Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositor.Exceptions.InternalCompositorException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositor.Exceptions.InternalCompositorException.html",
+          "hash": "q5AAABjIser3lPFkGzSo2qYP+To8nvgK5PuWCfXAW0U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositor.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositor.Exceptions.html",
+          "hash": "AVccc7IkGuiS/WRyRLkiQe0DaIL7bkRb4QGdO8W6Dts="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositor.Tracking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositor.Tracking.html",
+          "hash": "y8nuXBEESXRjzV1/biszjMEVWEqYBrJwCkIk4+oTfRQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositor.html",
+          "hash": "QYjxETZnzrpHYjWkQ5wH+dQnyr+siK313qr4n3PMSwg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.BufferSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.BufferSet.html",
+          "hash": "3tJ1I9PsFk801A/h3r6ijByEnxmV5CN65whQBY2jtDo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.CalibrationInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.CalibrationInfo.html",
+          "hash": "4rBJw1R7/UFTGl3WNLFQVdVjx7ZLSPx4RUGLZXWwVb4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.CalibrationIntrinsics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.CalibrationIntrinsics.html",
+          "hash": "Vu3aR9AfbDZrKiFAy32BpchLJjZgiBrvNq7A1M3J3o4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.CalibrationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.CalibrationState.html",
+          "hash": "UwyXdmpAv432lD4X9488ot97RtFL/F4NKFOZi6BOfLg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.CompositorConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.CompositorConstants.html",
+          "hash": "F6y8JxluvVYtAkRDxVEG9I5QhhPE+759TAdyhpzgK5k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.Eye.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.Eye.html",
+          "hash": "TcRk7c1NH0jV/v1klHz7I2ykQEgl+juwAJX+UtaSibg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.GraphicsAdapterInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.GraphicsAdapterInfo.html",
+          "hash": "JyIADU0h3tYZN/mM+viCiJoUZr3FZtifHmfDP61ldd4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.ICompositor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.ICompositor.html",
+          "hash": "AYlLiSOiBlJoXHcbloAJxxcYZtdqlZ5L3eNuiuLJuBY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.ICompositorParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.ICompositorParameters.html",
+          "hash": "qEaIlAm/SLCM90vR8ohrWdj9/C91VsJd/gePT0OFYmA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.ITracking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.ITracking.html",
+          "hash": "TqCk1JZm/fNrMGF45BLA395t6/WcW1D/V0dyZg4RyqU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.Matrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.Matrix.html",
+          "hash": "z09xqTi1wf921RqcFMTX0ETpvQrtFpnxqwsHSsEmykc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.Quaternion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.Quaternion.html",
+          "hash": "qi4XXaEr+I/g+UaO1jKtERaWALJwxxDatxEwCc/3XOs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.StereoDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.StereoDevice.html",
+          "hash": "Mbx7ovyC531Z2qg5oxWHLUgWbAJJIe11KE8icKNWcY8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.StereoDeviceModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.StereoDeviceModel.html",
+          "hash": "bs2eCoC5DVtGL3BMt9mzZs+i5Hc0KTEGY8Naqv9wpec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.TextureDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.TextureDescription.html",
+          "hash": "aN0Ys8z3d6Z+wMwRlaYBe1CJrUHBh2OSG0HJMhYHcTo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.TextureFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.TextureFormat.html",
+          "hash": "GcOTDPqbfiQPNhqNqKHXLUJMzCWLMhFtox1YllQ88Os="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.TrackedHeadPose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.TrackedHeadPose.html",
+          "hash": "NN5G1LFP+M2p3EKBqDda8JsPVvi54QDMBIYxmdv21Ug="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.TrackedObjectPose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.TrackedObjectPose.html",
+          "hash": "o+Xm4Da7G8xzHoN6uTaB4RsDgyPvp9i0up+QzK8xkxs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.TrackedObjectType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.TrackedObjectType.html",
+          "hash": "c3yZijgBBJEkFpP1vqa+EWvNQG7LK3/DsA9bd/EMhAA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.TrackingProviderDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.TrackingProviderDescription.html",
+          "hash": "gCO6njEdqEfYHay7rcx62yaN5axUAbu97whduuegJsE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.TrackingState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.TrackingState.html",
+          "hash": "RgH16UQhcl3lxk3xw4fH05oTCprs3WruO0DWDhBtbBs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.Vector2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.Vector2.html",
+          "hash": "OL/Ej+6CFMKUMsziZWOfVrllwloARqpE9G3KRuVwrhU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.Vector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.Vector3.html",
+          "hash": "yRv/QW6szbjvxNkaID+xAlexiaqMHboCUUfZOGWTE8k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorContracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorContracts.html",
+          "hash": "xozWVkywRhAE+u8jZtWw553tMZBkoKx08WSTGcdBY4w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorServiceClient.CompositorServiceClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorServiceClient.CompositorServiceClient.html",
+          "hash": "pX8IXEh2WDXTvZGjKC3pwIAn9cwfQ95zh6/OLazIQgk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorServiceClient.CompositorTrackingClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorServiceClient.CompositorTrackingClient.html",
+          "hash": "NXzvopG5XxwJQh3Qygl0Szwj3QI7D1c1n2pMBiyc8tI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorServiceClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorServiceClient.html",
+          "hash": "LfkNjsNlVwzYEyD8WwDFucjF4V3ITCi7xtlaEGjmYlM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorServiceClientNative.CompositorServiceClientNative.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorServiceClientNative.CompositorServiceClientNative.html",
+          "hash": "gwEQvJc0DpWpYoDH15fLMASMdaYD2CqL+OL4KerFQmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorServiceClientNative.NativeContracts.NativeGraphicsAdapterInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorServiceClientNative.NativeContracts.NativeGraphicsAdapterInfo.html",
+          "hash": "W0ZRvJO6Z7PApjJeT284AZckQo9Pz3aAhbCOkpAz+bc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorServiceClientNative.NativeContracts.NativeStereoDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorServiceClientNative.NativeContracts.NativeStereoDevice.html",
+          "hash": "onMCKA+XBWbBwdI9cNs8iDB2//EIO2ykZ2lS5mHLzv8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorServiceClientNative.NativeContracts.NativeTrackingProviderDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorServiceClientNative.NativeContracts.NativeTrackingProviderDescription.html",
+          "hash": "nGM4dYma+HuHqFxHsMW8f/sEUuxhgXQVozYI04zedC8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorServiceClientNative.NativeContracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorServiceClientNative.NativeContracts.html",
+          "hash": "cLdNl/u3eg0uasZkbGRHiNaXI4NMND+ImUWTaWeUWGA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LightspaceCompositorServiceClientNative.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LightspaceCompositorServiceClientNative.html",
+          "hash": "UIDbF8fqZoc3tmlOlGmf/Z7MfUKkpQgVk+a71czaoW0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/api-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/api-guide.html",
+          "hash": "nlZ8H707OdsZbv9853h0Noc0FPlrWPGtdGgv26dSS/E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/device-setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/device-setup.html",
+          "hash": "/zAARrfNEYzb6Ce+VK8W4FNCE0R73rv96Yf4lfnLJxg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/samples.html",
+          "hash": "vWczsJd09kknGWjPa97VfX87RalW+MQTq4xbqpBKT+s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ig1000-setup.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ig1000-setup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/minicube-sample.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/minicube-sample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "pGC3caZVrkKpuER7YTCQAKOU1ST3a7DWYkvdHR3W08g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 40,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

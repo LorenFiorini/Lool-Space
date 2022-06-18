@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LightspaceTrackingServiceClient</name>
+    </assembly>
+    <members>
+        <member name="T:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient">
+            <summary>
+            An RPC client wrapper for an ITrackingService implementation. Used to control the real TrackingService in a separate process.
+            </summary>
+            <seealso cref="T:LightspaceTrackingServiceContracts.ITrackingService" />
+        </member>
+        <member name="F:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.HostProcessName">
+            <summary>
+            The host process name.
+            </summary>
+        </member>
+        <member name="F:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.client">
+            <summary>
+            Tracking service client.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient"/> class.
+            </summary>
+            <param name="hostBinaryPath">Path to the host binary file, will be used if a running instance is not found.</param>
+        </member>
+        <member name="P:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.Ready">
+            <summary>
+            Gets a value indicating whether the tracking service has a connected tracking device and is ready to start tracking.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.Streaming">
+            <summary>
+            Gets a value indicating whether the tracking service is currently actively tracking.
+            </summary>
+        </member>
+        <member name="P:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.PluginLoaded">
+            <summary>
+            Gets a value indicating whether plugin has loaded correctly.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.TryConnectToExistingHostProcess(LightspaceTrackingServiceClient.LightspaceTrackingServiceClient@)">
+            <summary>
+            Checks and attempts to connect to host process if running and returns client instance on success.
+            </summary>
+            <param name="client">The client instance if host process is available.</param>
+            <returns>True, if connect attempt was successful. False, otherwise.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.CheckHostProcessIsRunning">
+            <summary>
+            Checks if host process is running.
+            </summary>
+            <returns>True, if host process is running. False, otherwise.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.LoadPlugin(System.String)">
+            <summary>
+            Load custom plugin from folder.
+            </summary>
+            <param name="pathToPlugin">Path to folder containing *Plugin.dll.</param>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.Start">
+            <summary>
+            Starts plugin tracking.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.Stop">
+            <summary>
+            Stops plugin tracking.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.GetLoadedPluginInformation">
+            <summary>
+            Gets loaded plugin info.
+            </summary>
+            <returns>The <see cref="T:LightspaceTrackingServiceContracts.TrackerPoseProviderDescription"/> of loaded plugin.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.GetTrackedObjects(System.Single)">
+            <summary>
+            Gets tracked objects.
+            </summary>
+            <param name="predictionTimeMs">The pose prediction time (render to photon latency).</param>
+            <returns>A collection of containing tracked objects.</returns>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.UpdateConnectedHeadsetDescription(LightspaceTrackingServiceContracts.ConnectedHeadsetDescription)">
+            <summary>
+            Updates the connected headset description.
+            </summary>
+            <param name="description">The HMD description.</param>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.Shutdown">
+            <summary>
+            Shuts down the tracking service.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClient.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:LightspaceTrackingServiceClient.LightspaceTrackingServiceClientException">
+            <summary>
+            A general TrackingServiceClient exception is thrown on operation failure.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClientException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LightspaceTrackingServiceClient.LightspaceTrackingServiceClientException" /> class.
+            </summary>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClientException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LightspaceTrackingServiceClient.LightspaceTrackingServiceClientException" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:LightspaceTrackingServiceClient.LightspaceTrackingServiceClientException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LightspaceTrackingServiceClient.LightspaceTrackingServiceClientException" /> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+    </members>
+</doc>

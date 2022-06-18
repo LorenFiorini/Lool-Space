@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ICompositorParameters
+   | Lightspace Compositor Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ICompositorParameters
+   | Lightspace Compositor Documentation ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Home">Home</a>
+                      </li>
+                      <li>
+                          <a href="../articles/device-setup.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/LightspaceCompositor.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositor.html" title="LightspaceCompositor" class="">LightspaceCompositor</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositor.Compositor.html" title="Compositor" class="">Compositor</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositor.CompositorParameters.html" title="CompositorParameters" class="">CompositorParameters</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositor.Tracking.html" title="Tracking" class="">Tracking</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositor.Exceptions.html" title="LightspaceCompositor.Exceptions" class="">LightspaceCompositor.Exceptions</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositor.Exceptions.CompositorException.html" title="CompositorException" class="">CompositorException</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositor.Exceptions.InternalCompositorException.html" title="InternalCompositorException" class="">InternalCompositorException</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorContracts.html" title="LightspaceCompositorContracts" class="">LightspaceCompositorContracts</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.BufferSet.html" title="BufferSet" class="">BufferSet</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CalibrationInfo.html" title="CalibrationInfo" class="">CalibrationInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CalibrationIntrinsics.html" title="CalibrationIntrinsics" class="">CalibrationIntrinsics</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CalibrationState.html" title="CalibrationState" class="">CalibrationState</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CompositorConstants.html" title="CompositorConstants" class="">CompositorConstants</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Eye.html" title="Eye" class="">Eye</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.GraphicsAdapterInfo.html" title="GraphicsAdapterInfo" class="">GraphicsAdapterInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.ICompositor.html" title="ICompositor" class="">ICompositor</a>
+                          </li>
+                          <li class="active">
+                            <a href="LightspaceCompositorContracts.ICompositorParameters.html" title="ICompositorParameters" class="active">ICompositorParameters</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.ITracking.html" title="ITracking" class="">ITracking</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Matrix.html" title="Matrix" class="">Matrix</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Quaternion.html" title="Quaternion" class="">Quaternion</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.StereoDevice.html" title="StereoDevice" class="">StereoDevice</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.StereoDeviceModel.html" title="StereoDeviceModel" class="">StereoDeviceModel</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TextureDescription.html" title="TextureDescription" class="">TextureDescription</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TextureFormat.html" title="TextureFormat" class="">TextureFormat</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackedHeadPose.html" title="TrackedHeadPose" class="">TrackedHeadPose</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackedObjectPose.html" title="TrackedObjectPose" class="">TrackedObjectPose</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackedObjectType.html" title="TrackedObjectType" class="">TrackedObjectType</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackingProviderDescription.html" title="TrackingProviderDescription" class="">TrackingProviderDescription</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackingState.html" title="TrackingState" class="">TrackingState</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Vector2.html" title="Vector2" class="">Vector2</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Vector3.html" title="Vector3" class="">Vector3</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorServiceClient.html" title="LightspaceCompositorServiceClient" class="">LightspaceCompositorServiceClient</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClient.CompositorServiceClient.html" title="CompositorServiceClient" class="">CompositorServiceClient</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClient.CompositorTrackingClient.html" title="CompositorTrackingClient" class="">CompositorTrackingClient</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorServiceClientNative.html" title="LightspaceCompositorServiceClientNative" class="">LightspaceCompositorServiceClientNative</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.html" title="CompositorServiceClientNative" class="">CompositorServiceClientNative</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorServiceClientNative.NativeContracts.html" title="LightspaceCompositorServiceClientNative.NativeContracts" class="">LightspaceCompositorServiceClientNative.NativeContracts</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.NativeContracts.NativeGraphicsAdapterInfo.html" title="NativeGraphicsAdapterInfo" class="">NativeGraphicsAdapterInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.NativeContracts.NativeStereoDevice.html" title="NativeStereoDevice" class="">NativeStereoDevice</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.NativeContracts.NativeTrackingProviderDescription.html" title="NativeTrackingProviderDescription" class="">NativeTrackingProviderDescription</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="LightspaceCompositorContracts.ICompositorParameters">
+  
+  
+  <h1 id="LightspaceCompositorContracts_ICompositorParameters" data-uid="LightspaceCompositorContracts.ICompositorParameters" class="text-break">Interface ICompositorParameters
+  </h1>
+  <div class="markdown level0 summary"><p>Interface for a Compositor Parameters implementation, a class with various parameters used for interfacing with the Compositor system.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="LightspaceCompositorContracts.html">LightspaceCompositorContracts</a></h6>
+  <h6><strong>Assembly</strong>: LightspaceCompositorContracts.dll</h6>
+  <h5 id="LightspaceCompositorContracts_ICompositorParameters_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICompositorParameters</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_FarPlaneMeters_" data-uid="LightspaceCompositorContracts.ICompositorParameters.FarPlaneMeters*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_FarPlaneMeters" data-uid="LightspaceCompositorContracts.ICompositorParameters.FarPlaneMeters">FarPlaneMeters</h4>
+  <div class="markdown level1 summary"><p>Gets the far plane value in meters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float FarPlaneMeters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_InterPupillaryDistanceMeters_" data-uid="LightspaceCompositorContracts.ICompositorParameters.InterPupillaryDistanceMeters*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_InterPupillaryDistanceMeters" data-uid="LightspaceCompositorContracts.ICompositorParameters.InterPupillaryDistanceMeters">InterPupillaryDistanceMeters</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the inter-pupillary distance (IPD) in meters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float InterPupillaryDistanceMeters { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_InvertDepth_" data-uid="LightspaceCompositorContracts.ICompositorParameters.InvertDepth*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_InvertDepth" data-uid="LightspaceCompositorContracts.ICompositorParameters.InvertDepth">InvertDepth</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the depth values should be inverted or not.
+Compositor assumes that input depth values are in 0..1 closest to furthest range.
+Setting the property to 'true' will invert the values so that 1..0 will be closest to furthest.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool InvertDepth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_LinearizeDepth_" data-uid="LightspaceCompositorContracts.ICompositorParameters.LinearizeDepth*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_LinearizeDepth" data-uid="LightspaceCompositorContracts.ICompositorParameters.LinearizeDepth">LinearizeDepth</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the depth should be linearized or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool LinearizeDepth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_NearPlaneMeters_" data-uid="LightspaceCompositorContracts.ICompositorParameters.NearPlaneMeters*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_NearPlaneMeters" data-uid="LightspaceCompositorContracts.ICompositorParameters.NearPlaneMeters">NearPlaneMeters</h4>
+  <div class="markdown level1 summary"><p>Gets the near plane value in meters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float NearPlaneMeters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_UseFogging_" data-uid="LightspaceCompositorContracts.ICompositorParameters.UseFogging*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_UseFogging" data-uid="LightspaceCompositorContracts.ICompositorParameters.UseFogging">UseFogging</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to use fogging or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool UseFogging { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_UseReprojection_" data-uid="LightspaceCompositorContracts.ICompositorParameters.UseReprojection*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_UseReprojection" data-uid="LightspaceCompositorContracts.ICompositorParameters.UseReprojection">UseReprojection</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the reprojection mode should be enabled or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool UseReprojection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_GetCalibratedProjectionMatrix_" data-uid="LightspaceCompositorContracts.ICompositorParameters.GetCalibratedProjectionMatrix*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_GetCalibratedProjectionMatrix_LightspaceCompositorContracts_Eye_" data-uid="LightspaceCompositorContracts.ICompositorParameters.GetCalibratedProjectionMatrix(LightspaceCompositorContracts.Eye)">GetCalibratedProjectionMatrix(Eye)</h4>
+  <div class="markdown level1 summary"><p>Attempts to get calibrated projection matrix loaded from HMD calibration data to be used with DX graphics api in LH coordinate system.
+If calibration is not available this will default to standard DX matrix based on device default parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Matrix GetCalibratedProjectionMatrix(Eye eye)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Eye.html">Eye</a></td>
+        <td><span class="parametername">eye</span></td>
+        <td><p>Which eye the data is requested for, left or right.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Matrix.html">Matrix</a></td>
+        <td><p>The calibrated view matrix or default projection matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_GetCalibratedViewMatrix_" data-uid="LightspaceCompositorContracts.ICompositorParameters.GetCalibratedViewMatrix*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_GetCalibratedViewMatrix_LightspaceCompositorContracts_Eye_" data-uid="LightspaceCompositorContracts.ICompositorParameters.GetCalibratedViewMatrix(LightspaceCompositorContracts.Eye)">GetCalibratedViewMatrix(Eye)</h4>
+  <div class="markdown level1 summary"><p>Attempts to get the calibrated view matrix loaded from HMD calibration data to be used with DX graphics api in LH coordinate system.
+If calibration is not available this will default to standard DX matrix based on device default parameters.
+This tells where the camera rendering position should be set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Matrix GetCalibratedViewMatrix(Eye eye)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Eye.html">Eye</a></td>
+        <td><span class="parametername">eye</span></td>
+        <td><p>Which eye the data is requested for, left or right.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Matrix.html">Matrix</a></td>
+        <td><p>The calibrated view matrix or default view matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_GetCalibrationIntrinsics_" data-uid="LightspaceCompositorContracts.ICompositorParameters.GetCalibrationIntrinsics*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_GetCalibrationIntrinsics_LightspaceCompositorContracts_Eye_" data-uid="LightspaceCompositorContracts.ICompositorParameters.GetCalibrationIntrinsics(LightspaceCompositorContracts.Eye)">GetCalibrationIntrinsics(Eye)</h4>
+  <div class="markdown level1 summary"><p>Attempts to get the calibration intrinsics for given eye when data is available. The values can be used to build required view and projection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">CalibrationIntrinsics GetCalibrationIntrinsics(Eye eye)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Eye.html">Eye</a></td>
+        <td><span class="parametername">eye</span></td>
+        <td><p>Which eye the data is requested for, left or right.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.CalibrationIntrinsics.html">CalibrationIntrinsics</a></td>
+        <td><p>The calibration intrinsics when data is available or default.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_GetCalibrationStatus_" data-uid="LightspaceCompositorContracts.ICompositorParameters.GetCalibrationStatus*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_GetCalibrationStatus" data-uid="LightspaceCompositorContracts.ICompositorParameters.GetCalibrationStatus">GetCalibrationStatus()</h4>
+  <div class="markdown level1 summary"><p>Gets the current calibration status, i.e. availability and validation info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">CalibrationInfo GetCalibrationStatus()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.CalibrationInfo.html">CalibrationInfo</a></td>
+        <td><p>The current calibration info.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_GetPixelOffsets_" data-uid="LightspaceCompositorContracts.ICompositorParameters.GetPixelOffsets*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_GetPixelOffsets_LightspaceCompositorContracts_Eye_" data-uid="LightspaceCompositorContracts.ICompositorParameters.GetPixelOffsets(LightspaceCompositorContracts.Eye)">GetPixelOffsets(Eye)</h4>
+  <div class="markdown level1 summary"><p>Gets the pixel offsets for the currently set IPD.
+These values represent by how many horizontal/vertical pixels the image needs to be shifted for the specified IPD.
+This adjustment is required for headsets that do not have mechanical IPD adjustment, so the image needs to be &quot;moved&quot;
+digitally.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector2 GetPixelOffsets(Eye eyeSide)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Eye.html">Eye</a></td>
+        <td><span class="parametername">eyeSide</span></td>
+        <td><p>Which eye the data is requested for, left or right.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Vector2.html">Vector2</a></td>
+        <td><p>A 2d offset to move image, measured in pixels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorContracts_ICompositorParameters_SetPlanes_" data-uid="LightspaceCompositorContracts.ICompositorParameters.SetPlanes*"></a>
+  <h4 id="LightspaceCompositorContracts_ICompositorParameters_SetPlanes_System_Single_System_Single_" data-uid="LightspaceCompositorContracts.ICompositorParameters.SetPlanes(System.Single,System.Single)">SetPlanes(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Sets the near and far plane values in meters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetPlanes(float nearPlaneMeters, float farPlaneMeters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">nearPlaneMeters</span></td>
+        <td><p>The near plane value in meters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">farPlaneMeters</span></td>
+        <td><p>The far plane value in meters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

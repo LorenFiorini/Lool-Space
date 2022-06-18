@@ -1,0 +1,741 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CompositorServiceClient
+   | Lightspace Compositor Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CompositorServiceClient
+   | Lightspace Compositor Documentation ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Home">Home</a>
+                      </li>
+                      <li>
+                          <a href="../articles/device-setup.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/LightspaceCompositor.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositor.html" title="LightspaceCompositor" class="">LightspaceCompositor</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositor.Compositor.html" title="Compositor" class="">Compositor</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositor.CompositorParameters.html" title="CompositorParameters" class="">CompositorParameters</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositor.Tracking.html" title="Tracking" class="">Tracking</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositor.Exceptions.html" title="LightspaceCompositor.Exceptions" class="">LightspaceCompositor.Exceptions</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositor.Exceptions.CompositorException.html" title="CompositorException" class="">CompositorException</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositor.Exceptions.InternalCompositorException.html" title="InternalCompositorException" class="">InternalCompositorException</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorContracts.html" title="LightspaceCompositorContracts" class="">LightspaceCompositorContracts</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.BufferSet.html" title="BufferSet" class="">BufferSet</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CalibrationInfo.html" title="CalibrationInfo" class="">CalibrationInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CalibrationIntrinsics.html" title="CalibrationIntrinsics" class="">CalibrationIntrinsics</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CalibrationState.html" title="CalibrationState" class="">CalibrationState</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CompositorConstants.html" title="CompositorConstants" class="">CompositorConstants</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Eye.html" title="Eye" class="">Eye</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.GraphicsAdapterInfo.html" title="GraphicsAdapterInfo" class="">GraphicsAdapterInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.ICompositor.html" title="ICompositor" class="">ICompositor</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.ICompositorParameters.html" title="ICompositorParameters" class="">ICompositorParameters</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.ITracking.html" title="ITracking" class="">ITracking</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Matrix.html" title="Matrix" class="">Matrix</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Quaternion.html" title="Quaternion" class="">Quaternion</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.StereoDevice.html" title="StereoDevice" class="">StereoDevice</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.StereoDeviceModel.html" title="StereoDeviceModel" class="">StereoDeviceModel</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TextureDescription.html" title="TextureDescription" class="">TextureDescription</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TextureFormat.html" title="TextureFormat" class="">TextureFormat</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackedHeadPose.html" title="TrackedHeadPose" class="">TrackedHeadPose</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackedObjectPose.html" title="TrackedObjectPose" class="">TrackedObjectPose</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackedObjectType.html" title="TrackedObjectType" class="">TrackedObjectType</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackingProviderDescription.html" title="TrackingProviderDescription" class="">TrackingProviderDescription</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackingState.html" title="TrackingState" class="">TrackingState</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Vector2.html" title="Vector2" class="">Vector2</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Vector3.html" title="Vector3" class="">Vector3</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorServiceClient.html" title="LightspaceCompositorServiceClient" class="">LightspaceCompositorServiceClient</a>
+                        
+                        <ul class="nav level2">
+                          <li class="active">
+                            <a href="LightspaceCompositorServiceClient.CompositorServiceClient.html" title="CompositorServiceClient" class="active">CompositorServiceClient</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClient.CompositorTrackingClient.html" title="CompositorTrackingClient" class="">CompositorTrackingClient</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorServiceClientNative.html" title="LightspaceCompositorServiceClientNative" class="">LightspaceCompositorServiceClientNative</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.html" title="CompositorServiceClientNative" class="">CompositorServiceClientNative</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorServiceClientNative.NativeContracts.html" title="LightspaceCompositorServiceClientNative.NativeContracts" class="">LightspaceCompositorServiceClientNative.NativeContracts</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.NativeContracts.NativeGraphicsAdapterInfo.html" title="NativeGraphicsAdapterInfo" class="">NativeGraphicsAdapterInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.NativeContracts.NativeStereoDevice.html" title="NativeStereoDevice" class="">NativeStereoDevice</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.NativeContracts.NativeTrackingProviderDescription.html" title="NativeTrackingProviderDescription" class="">NativeTrackingProviderDescription</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient">
+  
+  
+  <h1 id="LightspaceCompositorServiceClient_CompositorServiceClient" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient" class="text-break">Class CompositorServiceClient
+  </h1>
+  <div class="markdown level0 summary"><p>An RPC client wrapper for an ICompositor implementation. Used to control the real Compositor in a separate process.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">CompositorServiceClient</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="LightspaceCompositorContracts.ICompositor.html">ICompositor</a></div>
+    <div><span class="xref">IDisposable</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="LightspaceCompositorServiceClient.html">LightspaceCompositorServiceClient</a></h6>
+  <h6><strong>Assembly</strong>: LightspaceCompositorServiceClient.dll</h6>
+  <h5 id="LightspaceCompositorServiceClient_CompositorServiceClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CompositorServiceClient : object, ICompositor</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient__ctor_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.#ctor*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient__ctor_System_String_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.#ctor(System.String)">CompositorServiceClient(String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="LightspaceCompositorServiceClient.CompositorServiceClient.html">CompositorServiceClient</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompositorServiceClient(string hostBinaryPath = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">hostBinaryPath</span></td>
+        <td><p>Path to the host binary file, will be used if a running instance is not found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_BufferSets_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.BufferSets*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_BufferSets" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.BufferSets">BufferSets</h4>
+  <div class="markdown level1 summary"><p>Gets the available buffer sets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BufferSet[] BufferSets { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.BufferSet.html">BufferSet</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_IsFullScreen_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.IsFullScreen*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_IsFullScreen" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.IsFullScreen">IsFullScreen</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the compositor renderer is in fullscreen or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFullScreen { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_IsMaximized_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.IsMaximized*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_IsMaximized" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.IsMaximized">IsMaximized</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the compositing window is in maximized state or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMaximized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_Parameters_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.Parameters*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_Parameters" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.Parameters">Parameters</h4>
+  <div class="markdown level1 summary"><p>Gets the compositor parameters. This is proxied through the separate Parameters client,
+since the Parameters isn't a basic struct or a POCO, and ServiceWire does not do recursive proxying of objects.
+That is, if we want to call methods (gets and sets) on Parameters, we need to have a separate proxy set up for that.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompositorParameters Parameters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.ICompositorParameters.html">ICompositorParameters</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_StereoDevice_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.StereoDevice*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_StereoDevice" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.StereoDevice">StereoDevice</h4>
+  <div class="markdown level1 summary"><p>Gets the current stereo device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StereoDevice StereoDevice { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.StereoDevice.html">StereoDevice</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_Tracking_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.Tracking*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_Tracking" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.Tracking">Tracking</h4>
+  <div class="markdown level1 summary"><p>Gets the compositor tracking interface. This is proxied through the separate Tracking client,
+since the Parameters isn't a basic struct or a POCO, and ServiceWire does not do recursive proxying of objects.
+That is, if we want to call methods (gets and sets) on Parameters, we need to have a separate proxy set up for that.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITracking Tracking { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.ITracking.html">ITracking</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_CheckHostProcessIsRunning_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.CheckHostProcessIsRunning*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_CheckHostProcessIsRunning" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.CheckHostProcessIsRunning">CheckHostProcessIsRunning()</h4>
+  <div class="markdown level1 summary"><p>Checks if host process is running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CheckHostProcessIsRunning()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True, if host process is running. False, otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_Dispose_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.Dispose*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_Dispose" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Releases resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_GetCurrentPose_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.GetCurrentPose*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_GetCurrentPose" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.GetCurrentPose">GetCurrentPose()</h4>
+  <div class="markdown level1 summary"><p>Gets the pose from current tracking device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TrackedHeadPose GetCurrentPose()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.TrackedHeadPose.html">TrackedHeadPose</a></td>
+        <td><p>The tracking device pose.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_GetGraphicsAdapterInfo_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.GetGraphicsAdapterInfo*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_GetGraphicsAdapterInfo" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.GetGraphicsAdapterInfo">GetGraphicsAdapterInfo()</h4>
+  <div class="markdown level1 summary"><p>Gets graphics adapter info where compositor is rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsAdapterInfo GetGraphicsAdapterInfo()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.GraphicsAdapterInfo.html">GraphicsAdapterInfo</a></td>
+        <td><p>Graphics adapter info.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_RenderFinish_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.RenderFinish*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_RenderFinish_System_Int32_LightspaceCompositorContracts_TrackedHeadPose_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.RenderFinish(System.Int32,LightspaceCompositorContracts.TrackedHeadPose)">RenderFinish(Int32, TrackedHeadPose)</h4>
+  <div class="markdown level1 summary"><p>Mark the end of rendering for the given buffer set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RenderFinish(int id, TrackedHeadPose pose)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The buffer set identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.TrackedHeadPose.html">TrackedHeadPose</a></td>
+        <td><span class="parametername">pose</span></td>
+        <td><p>The tracking pose to mark with the rendered frame.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_RenderStart_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.RenderStart*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_RenderStart" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.RenderStart">RenderStart()</h4>
+  <div class="markdown level1 summary"><p>Signals compositor that rendering has started and returns a buffer set
+with render target views to render to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BufferSet RenderStart()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.BufferSet.html">BufferSet</a></td>
+        <td><p>A buffer set to render to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_Run_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.Run*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_Run" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.Run">Run()</h4>
+  <div class="markdown level1 summary"><p>Starts the compositor renderer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Run()</code></pre>
+  </div>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_Shutdown_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.Shutdown*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_Shutdown" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.Shutdown">Shutdown()</h4>
+  <div class="markdown level1 summary"><p>Shuts down this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Shutdown()</code></pre>
+  </div>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_TryConnectToExistingHostProcess_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.TryConnectToExistingHostProcess*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_TryConnectToExistingHostProcess_LightspaceCompositorServiceClient_CompositorServiceClient__" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.TryConnectToExistingHostProcess(LightspaceCompositorServiceClient.CompositorServiceClient@)">TryConnectToExistingHostProcess(out CompositorServiceClient)</h4>
+  <div class="markdown level1 summary"><p>Checks and attempts to connect to host process if running and returns client instance on success.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryConnectToExistingHostProcess(out CompositorServiceClient client)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorServiceClient.CompositorServiceClient.html">CompositorServiceClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The client instance if host process is available.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True, if connect attempt was successful. False, otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClient_CompositorServiceClient_WaitRenderStart_" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.WaitRenderStart*"></a>
+  <h4 id="LightspaceCompositorServiceClient_CompositorServiceClient_WaitRenderStart" data-uid="LightspaceCompositorServiceClient.CompositorServiceClient.WaitRenderStart">WaitRenderStart()</h4>
+  <div class="markdown level1 summary"><p>Waits for next compositor v-blank. Use this to sync renderer with compositor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WaitRenderStart()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="LightspaceCompositorContracts.ICompositor.html">ICompositor</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="LightspaceCompositorContracts.ICompositor.html">ICompositor</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

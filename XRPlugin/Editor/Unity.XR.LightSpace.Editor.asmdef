@@ -1,0 +1,19 @@
+{
+    "name": "Unity.XR.LightSpace.Editor",
+    "references": [
+	    "Unity.XR.LightSpace",
+        "Unity.XR.Management",
+		"Unity.XR.Management.Editor"
+    ],
+	"includePlatforms": [
+        "Editor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

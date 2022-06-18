@@ -1,0 +1,1424 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CompositorServiceClientNative
+   | Lightspace Compositor Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CompositorServiceClientNative
+   | Lightspace Compositor Documentation ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Home">Home</a>
+                      </li>
+                      <li>
+                          <a href="../articles/device-setup.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/LightspaceCompositor.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositor.html" title="LightspaceCompositor" class="">LightspaceCompositor</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositor.Compositor.html" title="Compositor" class="">Compositor</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositor.CompositorParameters.html" title="CompositorParameters" class="">CompositorParameters</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositor.Tracking.html" title="Tracking" class="">Tracking</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositor.Exceptions.html" title="LightspaceCompositor.Exceptions" class="">LightspaceCompositor.Exceptions</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositor.Exceptions.CompositorException.html" title="CompositorException" class="">CompositorException</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositor.Exceptions.InternalCompositorException.html" title="InternalCompositorException" class="">InternalCompositorException</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorContracts.html" title="LightspaceCompositorContracts" class="">LightspaceCompositorContracts</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.BufferSet.html" title="BufferSet" class="">BufferSet</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CalibrationInfo.html" title="CalibrationInfo" class="">CalibrationInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CalibrationIntrinsics.html" title="CalibrationIntrinsics" class="">CalibrationIntrinsics</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CalibrationState.html" title="CalibrationState" class="">CalibrationState</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.CompositorConstants.html" title="CompositorConstants" class="">CompositorConstants</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Eye.html" title="Eye" class="">Eye</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.GraphicsAdapterInfo.html" title="GraphicsAdapterInfo" class="">GraphicsAdapterInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.ICompositor.html" title="ICompositor" class="">ICompositor</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.ICompositorParameters.html" title="ICompositorParameters" class="">ICompositorParameters</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.ITracking.html" title="ITracking" class="">ITracking</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Matrix.html" title="Matrix" class="">Matrix</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Quaternion.html" title="Quaternion" class="">Quaternion</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.StereoDevice.html" title="StereoDevice" class="">StereoDevice</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.StereoDeviceModel.html" title="StereoDeviceModel" class="">StereoDeviceModel</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TextureDescription.html" title="TextureDescription" class="">TextureDescription</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TextureFormat.html" title="TextureFormat" class="">TextureFormat</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackedHeadPose.html" title="TrackedHeadPose" class="">TrackedHeadPose</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackedObjectPose.html" title="TrackedObjectPose" class="">TrackedObjectPose</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackedObjectType.html" title="TrackedObjectType" class="">TrackedObjectType</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackingProviderDescription.html" title="TrackingProviderDescription" class="">TrackingProviderDescription</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.TrackingState.html" title="TrackingState" class="">TrackingState</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Vector2.html" title="Vector2" class="">Vector2</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorContracts.Vector3.html" title="Vector3" class="">Vector3</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorServiceClient.html" title="LightspaceCompositorServiceClient" class="">LightspaceCompositorServiceClient</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClient.CompositorServiceClient.html" title="CompositorServiceClient" class="">CompositorServiceClient</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClient.CompositorTrackingClient.html" title="CompositorTrackingClient" class="">CompositorTrackingClient</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorServiceClientNative.html" title="LightspaceCompositorServiceClientNative" class="">LightspaceCompositorServiceClientNative</a>
+                        
+                        <ul class="nav level2">
+                          <li class="active">
+                            <a href="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.html" title="CompositorServiceClientNative" class="active">CompositorServiceClientNative</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="LightspaceCompositorServiceClientNative.NativeContracts.html" title="LightspaceCompositorServiceClientNative.NativeContracts" class="">LightspaceCompositorServiceClientNative.NativeContracts</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.NativeContracts.NativeGraphicsAdapterInfo.html" title="NativeGraphicsAdapterInfo" class="">NativeGraphicsAdapterInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.NativeContracts.NativeStereoDevice.html" title="NativeStereoDevice" class="">NativeStereoDevice</a>
+                          </li>
+                          <li class="">
+                            <a href="LightspaceCompositorServiceClientNative.NativeContracts.NativeTrackingProviderDescription.html" title="NativeTrackingProviderDescription" class="">NativeTrackingProviderDescription</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative">
+  
+  
+  <h1 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative" class="text-break">Class CompositorServiceClientNative
+  </h1>
+  <div class="markdown level0 summary"><p>Class for communicating with a CompositorHost from a native application.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">CompositorServiceClientNative</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="LightspaceCompositorServiceClientNative.html">LightspaceCompositorServiceClientNative</a></h6>
+  <h6><strong>Assembly</strong>: LightspaceCompositorServiceClientNative.dll</h6>
+  <h5 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class CompositorServiceClientNative</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetBufferSet_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetBufferSet*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetBufferSet_System_Int32_LightspaceCompositorContracts_BufferSet_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetBufferSet(System.Int32,LightspaceCompositorContracts.BufferSet)">GetBufferSet(Int32, BufferSet)</h4>
+  <div class="markdown level1 summary"><p>Gets the buffer set indicated by the index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetBufferSet(int index, BufferSet bufferSet)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Index of the buffer set to return.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.BufferSet.html">BufferSet</a></td>
+        <td><span class="parametername">bufferSet</span></td>
+        <td><p>The specified buffer, or an empty structure in case of an error.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero on failure. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetBufferSetCount_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetBufferSetCount*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetBufferSetCount" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetBufferSetCount">GetBufferSetCount()</h4>
+  <div class="markdown level1 summary"><p>Gets the number of available buffer sets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetBufferSetCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of available buffer sets, or -1 in the case of an error. Consumers should call GetLastError if value was less than 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCalibratedProjectionMatrix_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCalibratedProjectionMatrix*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCalibratedProjectionMatrix_LightspaceCompositorContracts_Eye_LightspaceCompositorContracts_Matrix_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCalibratedProjectionMatrix(LightspaceCompositorContracts.Eye,LightspaceCompositorContracts.Matrix)">GetCalibratedProjectionMatrix(Eye, Matrix)</h4>
+  <div class="markdown level1 summary"><p>Attempts to get calibrated projection matrix loaded from HMD calibration data to be used with DX graphics api in LH coordinate system.
+If calibration is not available this will default to standard DX matrix based on device default parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetCalibratedProjectionMatrix(Eye eye, Matrix matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Eye.html">Eye</a></td>
+        <td><span class="parametername">eye</span></td>
+        <td><p>Which eye the data is requested for, left or right.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Matrix.html">Matrix</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The calibrated view matrix or default projection matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCalibratedViewMatrix_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCalibratedViewMatrix*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCalibratedViewMatrix_LightspaceCompositorContracts_Eye_LightspaceCompositorContracts_Matrix_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCalibratedViewMatrix(LightspaceCompositorContracts.Eye,LightspaceCompositorContracts.Matrix)">GetCalibratedViewMatrix(Eye, Matrix)</h4>
+  <div class="markdown level1 summary"><p>Attempts to get the calibrated view matrix loaded from HMD calibration data to be used with DX graphics api in LH coordinate system.
+If calibration is not available this will default to standard DX matrix based on device default parameters.
+This tells where the camera rendering position should be set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetCalibratedViewMatrix(Eye eye, Matrix matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Eye.html">Eye</a></td>
+        <td><span class="parametername">eye</span></td>
+        <td><p>Which eye the data is requested for, left or right.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Matrix.html">Matrix</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The calibrated view matrix or default projection matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCalibrationIntrinsics_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCalibrationIntrinsics*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCalibrationIntrinsics_LightspaceCompositorContracts_Eye_LightspaceCompositorContracts_CalibrationIntrinsics_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCalibrationIntrinsics(LightspaceCompositorContracts.Eye,LightspaceCompositorContracts.CalibrationIntrinsics)">GetCalibrationIntrinsics(Eye, CalibrationIntrinsics)</h4>
+  <div class="markdown level1 summary"><p>Attempts to get the calibration intrinsics for given eye when data is available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetCalibrationIntrinsics(Eye eye, CalibrationIntrinsics intrinsics)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Eye.html">Eye</a></td>
+        <td><span class="parametername">eye</span></td>
+        <td><p>Which eye the data is requested for, left or right.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.CalibrationIntrinsics.html">CalibrationIntrinsics</a></td>
+        <td><span class="parametername">intrinsics</span></td>
+        <td><p>The internal camera calibration intrinsics for given eye, defaults if unavailable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCalibrationStatus_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCalibrationStatus*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCalibrationStatus_LightspaceCompositorContracts_CalibrationInfo_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCalibrationStatus(LightspaceCompositorContracts.CalibrationInfo)">GetCalibrationStatus(CalibrationInfo)</h4>
+  <div class="markdown level1 summary"><p>Gets the current calibration status, i.e. availability and validation info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetCalibrationStatus(CalibrationInfo status)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.CalibrationInfo.html">CalibrationInfo</a></td>
+        <td><span class="parametername">status</span></td>
+        <td><p>The calibration info on success. Defaults otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCurrentPose_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCurrentPose*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCurrentPose_LightspaceCompositorContracts_TrackedHeadPose_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCurrentPose(LightspaceCompositorContracts.TrackedHeadPose)">GetCurrentPose(TrackedHeadPose)</h4>
+  <div class="markdown level1 summary"><p>Wraps the GetCurrentPose call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetCurrentPose(TrackedHeadPose pose)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.TrackedHeadPose.html">TrackedHeadPose</a></td>
+        <td><span class="parametername">pose</span></td>
+        <td><p>Reference to a <a class="xref" href="LightspaceCompositorContracts.TrackedHeadPose.html">TrackedHeadPose</a> structure to store the data into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero on failure. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCurrentTrackerInfo_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCurrentTrackerInfo*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetCurrentTrackerInfo_LightspaceCompositorServiceClientNative_NativeContracts_NativeTrackingProviderDescription_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetCurrentTrackerInfo(LightspaceCompositorServiceClientNative.NativeContracts.NativeTrackingProviderDescription)">GetCurrentTrackerInfo(NativeTrackingProviderDescription)</h4>
+  <div class="markdown level1 summary"><p>Wraps the GetCurrentTrackerInfo call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetCurrentTrackerInfo(NativeTrackingProviderDescription nativeTrackerInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorServiceClientNative.NativeContracts.NativeTrackingProviderDescription.html">NativeTrackingProviderDescription</a></td>
+        <td><span class="parametername">nativeTrackerInfo</span></td>
+        <td><p>Reference to a <a class="xref" href="LightspaceCompositorContracts.TrackingProviderDescription.html">TrackingProviderDescription</a> structure to store the data into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero on failure. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetGraphicsAdapterInfo_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetGraphicsAdapterInfo*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetGraphicsAdapterInfo_LightspaceCompositorServiceClientNative_NativeContracts_NativeGraphicsAdapterInfo_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetGraphicsAdapterInfo(LightspaceCompositorServiceClientNative.NativeContracts.NativeGraphicsAdapterInfo)">GetGraphicsAdapterInfo(NativeGraphicsAdapterInfo)</h4>
+  <div class="markdown level1 summary"><p>Wraps the GetGraphicsAdapterInfo call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetGraphicsAdapterInfo(NativeGraphicsAdapterInfo nativeGraphicsAdapterInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorServiceClientNative.NativeContracts.NativeGraphicsAdapterInfo.html">NativeGraphicsAdapterInfo</a></td>
+        <td><span class="parametername">nativeGraphicsAdapterInfo</span></td>
+        <td><p>Reference to see <a class="xref" href="LightspaceCompositorServiceClientNative.NativeContracts.NativeGraphicsAdapterInfo.html">NativeGraphicsAdapterInfo</a> structure to store the data into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero on failure. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetLastError_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetLastError*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetLastError" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetLastError">GetLastError()</h4>
+  <div class="markdown level1 summary"><p>Retrieves the last logged error string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IntPtr GetLastError()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><p>A pointer to the error string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetPixelOffsets_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetPixelOffsets*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetPixelOffsets_LightspaceCompositorContracts_Eye_LightspaceCompositorContracts_Vector2_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetPixelOffsets(LightspaceCompositorContracts.Eye,LightspaceCompositorContracts.Vector2)">GetPixelOffsets(Eye, Vector2)</h4>
+  <div class="markdown level1 summary"><p>Gets the pixel offsets for the currently set IPD.
+These values represent by how many horizontal/vertical pixels the image needs to be shifted for the specified IPD.
+This adjustment is required for headsets that do not have mechanical IPD adjustment, so the image needs to be &quot;moved&quot;
+digitally.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetPixelOffsets(Eye eyeSide, Vector2 offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Eye.html">Eye</a></td>
+        <td><span class="parametername">eyeSide</span></td>
+        <td><p>Which eye the data is requested for, left or right.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Returned offset values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetPupilDistance_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetPupilDistance*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetPupilDistance" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetPupilDistance">GetPupilDistance()</h4>
+  <div class="markdown level1 summary"><p>Gets the pupil distance in meters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float GetPupilDistance()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><p>The pupil distance in meters if the call was successful, or negative value in case of error. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetStereoDevice_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetStereoDevice*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_GetStereoDevice_LightspaceCompositorServiceClientNative_NativeContracts_NativeStereoDevice_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.GetStereoDevice(LightspaceCompositorServiceClientNative.NativeContracts.NativeStereoDevice)">GetStereoDevice(NativeStereoDevice)</h4>
+  <div class="markdown level1 summary"><p>Gets the stereo device details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetStereoDevice(NativeStereoDevice stereoDevice)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorServiceClientNative.NativeContracts.NativeStereoDevice.html">NativeStereoDevice</a></td>
+        <td><span class="parametername">stereoDevice</span></td>
+        <td><p>The returned stereo device.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_Initialize_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.Initialize*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_Initialize_System_IntPtr_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.Initialize(System.IntPtr)">Initialize(IntPtr)</h4>
+  <div class="markdown level1 summary"><p>Initializes the dependencies: host application, named pipe proxy channels, etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Initialize(IntPtr compositorHostPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">compositorHostPath</span></td>
+        <td><p>Path to the host application's exe (optional).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, an error code otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_IsFullScreen_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.IsFullScreen*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_IsFullScreen" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.IsFullScreen">IsFullScreen()</h4>
+  <div class="markdown level1 summary"><p>Wraps the IsFullScreen call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsFullScreen()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A bool indicating whether the host app is currently running in full screen.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_IsMaximized_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.IsMaximized*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_IsMaximized" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.IsMaximized">IsMaximized()</h4>
+  <div class="markdown level1 summary"><p>Wraps the IsMaximized call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsMaximized()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A bool indicating whether the host app is currently running in maximized window mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_RenderFinish_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.RenderFinish*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_RenderFinish_System_Int32_LightspaceCompositorContracts_TrackedHeadPose_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.RenderFinish(System.Int32,LightspaceCompositorContracts.TrackedHeadPose)">RenderFinish(Int32, TrackedHeadPose)</h4>
+  <div class="markdown level1 summary"><p>Wraps the RenderFinish call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int RenderFinish(int bufferSetId, TrackedHeadPose pose)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">bufferSetId</span></td>
+        <td><p>Id of the buffer set used for the render.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.TrackedHeadPose.html">TrackedHeadPose</a></td>
+        <td><span class="parametername">pose</span></td>
+        <td><p>The pose that was used with rendering.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_RenderStart_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.RenderStart*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_RenderStart_LightspaceCompositorContracts_BufferSet_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.RenderStart(LightspaceCompositorContracts.BufferSet)">RenderStart(BufferSet)</h4>
+  <div class="markdown level1 summary"><p>Wraps the RenderStart call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int RenderStart(BufferSet bufferSet)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="LightspaceCompositorContracts.BufferSet.html">BufferSet</a></td>
+        <td><span class="parametername">bufferSet</span></td>
+        <td><p>A BufferSet if the call was successful, or an unpopulated struct in case of error.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_Run_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.Run*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_Run" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.Run">Run()</h4>
+  <div class="markdown level1 summary"><p>Wraps the Run call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Run()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_SetInvertDepth_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.SetInvertDepth*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_SetInvertDepth_System_Boolean_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.SetInvertDepth(System.Boolean)">SetInvertDepth(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets whether the depth should be inverted or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SetInvertDepth(bool invertDepth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">invertDepth</span></td>
+        <td><p>Invert depth, true or false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_SetPlanes_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.SetPlanes*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_SetPlanes_System_Single_System_Single_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.SetPlanes(System.Single,System.Single)">SetPlanes(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Wraps the SetPlanes call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SetPlanes(float nearPlane, float farPlane)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">nearPlane</span></td>
+        <td><p>The near plane distance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">farPlane</span></td>
+        <td><p>The far plane distance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_SetPupilDistance_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.SetPupilDistance*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_SetPupilDistance_System_Single_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.SetPupilDistance(System.Single)">SetPupilDistance(Single)</h4>
+  <div class="markdown level1 summary"><p>Sets the pupil distance in meters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SetPupilDistance(float pupilDistanceMeters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">pupilDistanceMeters</span></td>
+        <td><p>The pupil distance in meters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_SetTrackingPluginPath_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.SetTrackingPluginPath*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_SetTrackingPluginPath_System_IntPtr_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.SetTrackingPluginPath(System.IntPtr)">SetTrackingPluginPath(IntPtr)</h4>
+  <div class="markdown level1 summary"><p>Wraps the SetTrackingPluginPath call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SetTrackingPluginPath(IntPtr pluginPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">pluginPath</span></td>
+        <td><p>The unmanaged string path pointer to tracking plugin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_SetTrackingServiceProviderPath_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.SetTrackingServiceProviderPath*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_SetTrackingServiceProviderPath_System_IntPtr_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.SetTrackingServiceProviderPath(System.IntPtr)">SetTrackingServiceProviderPath(IntPtr)</h4>
+  <div class="markdown level1 summary"><p>Wraps the SetTrackingServiceProviderPath call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SetTrackingServiceProviderPath(IntPtr providerPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">providerPath</span></td>
+        <td><p>The unmanaged string path pointer to tracking service provider (i.e. host).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_Shutdown_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.Shutdown*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_Shutdown" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.Shutdown">Shutdown()</h4>
+  <div class="markdown level1 summary"><p>Wraps the Shutdown call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Shutdown()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_TryInitialize_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.TryInitialize*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_TryInitialize" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.TryInitialize">TryInitialize()</h4>
+  <div class="markdown level1 summary"><p>Attempts to initialize dependencies if host process is already running: named pipe proxy channels, etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryInitialize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True on success, false otherwise. Consumers should call GetLastError if result is false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_WaitRenderStart_" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.WaitRenderStart*"></a>
+  <h4 id="LightspaceCompositorServiceClientNative_CompositorServiceClientNative_WaitRenderStart" data-uid="LightspaceCompositorServiceClientNative.CompositorServiceClientNative.WaitRenderStart">WaitRenderStart()</h4>
+  <div class="markdown level1 summary"><p>Wraps the WaitRenderStart call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int WaitRenderStart()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>0 on success, non-zero value otherwise. Consumers should call GetLastError if value was not 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

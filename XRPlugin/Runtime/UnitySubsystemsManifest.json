@@ -1,0 +1,17 @@
+{
+	"name": "LightSpace XR SDK",
+	"version": "1.0.0-preview",
+	"libraryName": "LightSpaceXR",
+
+	"displays": [
+		{
+			"id": "LightSpace Display",
+			"disablesLegacyVr" : true
+		}
+	],
+	"inputs": [
+		{
+			"id": "LightSpace Head Tracking"
+		}
+	]
+}
